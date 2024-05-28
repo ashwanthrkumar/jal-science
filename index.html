@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Newsers - Free HTML Magazine Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@100;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .img-circle {
+            border-radius: 50%;
+            /* Set border radius to 50% for circular shape */
+
+        }
+
+        .shadow-effect {
+            background: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+            border: 1px solid #ECECEC;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10), 0 15px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        #customers-testimonials .shadow-effect p {
+            font-family: inherit;
+            font-size: 17px;
+            line-height: 1.5;
+            margin: 0 0 17px 0;
+            font-weight: 300;
+        }
+
+        .testimonial-name {
+            margin: -17px auto 0;
+            display: table;
+            width: auto;
+            background: #3190E7;
+            padding: 9px 35px;
+            border-radius: 12px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 9px 18px rgba(0, 0, 0, 0.12), 0 5px 7px rgba(0, 0, 0, 0.05);
+        }
+
+        #customers-testimonials .item {
+            text-align: center;
+            padding: 50px;
+            margin-bottom: 80px;
+            opacity: .2;
+            -webkit-transform: scale3d(0.8, 0.8, 1);
+            transform: scale3d(0.8, 0.8, 1);
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #customers-testimonials .owl-item.active.center .item {
+            opacity: 1;
+            -webkit-transform: scale3d(1.0, 1.0, 1);
+            transform: scale3d(1.0, 1.0, 1);
+        }
+
+        .owl-carousel .owl-item img {
+            transform-style: preserve-3d;
+            max-width: 90px;
+            margin: 0 auto 17px;
+        }
+
+        #customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
+        #customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+            background: #3190E7;
+            transform: translate3d(0px, -50%, 0px) scale(0.7);
+        }
+
+        #customers-testimonials.owl-carousel .owl-dots {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        #customers-testimonials.owl-carousel .owl-dots .owl-dot {
+            display: inline-block;
+        }
+
+        #customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+            background: #3190E7;
+            display: inline-block;
+            height: 20px;
+            margin: 0 2px 5px;
+            transform: translate3d(0px, -50%, 0px) scale(0.3);
+            transform-origin: 50% 50% 0;
+            transition: all 250ms ease-out 0s;
+            width: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar start -->
+    <div class="container-fluid sticky-top px-0">
+        <div class="container-fluid topbar bg-dark d-none d-lg-block">
+            <div class="container px-0">
+                <div class="topbar-top d-flex justify-content-between flex-lg-wrap">
+
+                    <div class="top-link flex-lg-wrap">
+
+                        <div class="d-flex icon">
+                            <p class="mb-0 text-white me-2">Follow Us:</p>
+                            <a href="" class="me-2"><i class="fab fa-facebook-f text-body link-hover"></i></a>
+                            <a href="" class="me-2"><i class="fab fa-twitter text-body link-hover"></i></a>
+                            <a href="" class="me-2"><i class="fab fa-instagram text-body link-hover"></i></a>
+                            <a href="" class="me-2"><i class="fab fa-youtube text-body link-hover"></i></a>
+                            <a href="" class="me-2"><i class="fab fa-linkedin-in text-body link-hover"></i></a>
+                            <a href="" class="me-2"><i class="fab fa-skype text-body link-hover"></i></a>
+                            <a href="" class=""><i class="fab fa-pinterest-p text-body link-hover"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-light">
+            <div class="container px-0">
+                <nav class="navbar navbar-light navbar-expand-xl">
+                    <a href="index.html" class="navbar-brand ">
+                        <img src="img/logo.png" style="width: 10rem;">
+                    </a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-light py-3" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto border-top">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Domestic Sewage
+                                    Treatment Plant</a>
+                                <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                    <a href="#" class="dropdown-item">Dropdown 1</a>
+                                    <a href="#" class="dropdown-item">Dropdown 2</a>
+                                    <a href="#" class="dropdown-item">Dropdown 3</a>
+                                    <a href="#" class="dropdown-item">Dropdown 4</a>
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Commercial Sewage
+                                    Treatment Plant</a>
+                                <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                    <a href="#" class="dropdown-item">Dropdown 1</a>
+                                    <a href="#" class="dropdown-item">Dropdown 2</a>
+                                    <a href="#" class="dropdown-item">Dropdown 3</a>
+                                    <a href="#" class="dropdown-item">Dropdown 4</a>
+                                </div>
+                            </div>
+                            <a href="detail-page.html" class="nav-item nav-link">Clients</a>
+                            <a href="404.html" class="nav-item nav-link">Blogs</a>
+
+                            <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                        </div>
+                        <a href="detail-page.html" class="nav-item nav-link"><button type="button"
+                                class="btn btn-danger breathing-button">Quick Enquiry</button>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+
+
+
+    <!-- Features Start -->
+    <div class="container-fluid features mb-5">
+        <div class="container py-5">
+            <div class="row g-4 justify-content-center mx-auto">
+                <div class="col-md-6 col-lg-6 col-xl-3 ">
+                    <div class="row g-4 align-items-center features-item">
+                        <div class="col-4">
+                            <div class="rounded-circle position-relative">
+                                <div class="overflow-hidden rounded-circle">
+                                    <img src="img/dstp.jpg" class="img-zoomin-hero img-fluid rounded-circle w-100"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="features-content d-flex flex-column">
+                                <p class="text-uppercase-index-hero mb-1" style="font-family: 'Roboto'" ;>DOMESTIC</p>
+                                <a href="#" class="h5" style="color: white;">
+                                    Sewage Treatment Solution
+                                </a>
+                                <small class="text-body-hero d-block" style="color: white;">Say goodbye to septic tank.
+                                    Say hello to bio-tank!</small>
+                                <br>
+                                <a href="index.html"><button type="button" class="btn btn-outline-light">Click
+                                        here</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="row g-4 align-items-center features-item">
+                        <div class="col-4">
+                            <div class="rounded-circle position-relative">
+                                <div class="overflow-hidden rounded-circle">
+                                    <img src="img/cstp.jpg" class="img-zoomin-hero img-fluid rounded-circle w-100"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="features-content d-flex flex-column">
+                                <p class="text-uppercase-index-hero mb-1" style="font-family: 'Roboto'" ;>COMMERCIAL</p>
+                                <a href="#" class="h5" style="color: white;">
+                                    Sewage Treatment Plant
+                                </a>
+                                <small class="text-body-hero d-block" style="color: white;">Non-electric, compact and
+                                    eco-friendly solution.</small>
+                                <br>
+                                <a href="index.html"><button type="button" class="btn btn-outline-light">Click
+                                        here</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Features End -->
+
+
+
+
+    <!-- Banner Start -->
+    <div class="container-fluid py-5 my-5"
+        style="background: linear-gradient(rgba(202, 203, 185, 1), rgba(202, 203, 185, 1));">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center">
+                    <a href="index.html" class="navbar-brand mb-3">
+                        <img src="img/logo.png" style="width: 10rem;">
+                    </a>
+                    <h2 class="mb-4">India's First Non-electric Modular Concrete Sewage Treatment Solution</h2>
+                    <p class="text-dark mb-4 pb-2">An innovative advanced sewage treatment solution that uses Anaerobic
+                        Biodigestion Reactor Technology (ABRT) that converts household sewage water into clear,
+                        odourless water. Treated water can be used for gardening or groundwater recharge. Bioman,
+                        non-filling bio-tank provides you with an economic and environmentally friendly solution for
+                        wastewater treatment. It's an Easy, convenient and painless way of sewage treatment./p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+
+    <div class="table-container">
+        <h2 style="font-family: 'Roboto';">Conventional STP Vs Bioman Bio Septic Tank</h2>
+
+        <div class="designer-line"></div>
+        <table class="table-bordered">
+            <thead>
+                <tr>
+                    <th>Conventional STP</th>
+                    <th>Jal Science</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Electricity required</td>
+                    <td>Zero power, runs on gravity flow</td>
+                </tr>
+                <tr>
+                    <td>2-shift skilled STP operator</td>
+                    <td>No operator</td>
+                </tr>
+                <tr>
+                    <td>Backup generator and diesel required</td>
+                    <td>No generator, No diesel</td>
+                </tr>
+                <tr>
+                    <td>Motors, blowers and frequent oil change required</td>
+                    <td>No motors and blowers; hence no oil change required</td>
+                </tr>
+                <tr>
+                    <td>24x7 noise pollution</td>
+                    <td>Noise-free</td>
+                </tr>
+                <tr>
+                    <td>Risky if exhaust fans are switched off</td>
+                    <td>No exhaust fans. Hence no risk</td>
+                </tr>
+                <tr>
+                    <td>Involves chemicals (Urea, Chlorine etc.)</td>
+                    <td>100% chemicals-free</td>
+                </tr>
+                <tr>
+                    <td>Sludge removal - daily/weekly</td>
+                    <td>Sealed tank. No manual handling. Risk-free.</td>
+                </tr>
+                <tr>
+                    <td>Dedicated STP space and operator room required</td>
+                    <td>Operator room not required; saves on space.</td>
+                </tr>
+                <tr>
+                    <td>Sludge pathogen risk</td>
+                    <td>No sludge pathogen risk</td>
+                </tr>
+                <tr>
+                    <td>MLSS monitoring; need to add bacteria on an hourly basis</td>
+                    <td>Bacteria to be added only once in 3 months</td>
+                </tr>
+                <tr>
+                    <td>STP life just 3 - 5 years. Need to keep buying spares.</td>
+                    <td>Lifetime product</td>
+                </tr>
+                <tr>
+                    <td>Bad odour</td>
+                    <td>Completely odour-free</td>
+                </tr>
+                <tr>
+                    <td>30% minimum load needed to begin operations</td>
+                    <td>Even one toilet is enough to begin operations</td>
+                </tr>
+                <tr>
+                    <td>Bar screen filter to be cleaned regularly</td>
+                    <td>No bar screen filter required</td>
+                </tr>
+                <tr>
+                    <td>Can be accidentally switched off</td>
+                    <td>Cannot be switched off</td>
+                </tr>
+                <tr>
+                    <td>24x7 maintenance required</td>
+                    <td>Maintenance-free</td>
+                </tr>
+                <tr>
+                    <td>Installation time 1 - 2 months</td>
+                    <td>Can be installed within 24 hours</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="customers-testimonials" class="owl-carousel">
+
+                        <!--TESTIMONIAL 1 -->
+                        <div class="item">
+                            <div class="shadow-effect">
+                                <img class="img-circle" src="./img/test.jpg" alt="">
+                                <p>Switching to Jal Science's sewage treatment solution was a game-changer for us. Not
+                                    only did it eliminate the need for electricity, but it also provided a seamless,
+                                    eco-friendly alternative to conventional systems. </p>
+                            </div>
+                            <div class="testimonial-name">Ashwanth</div>
+                        </div>
+                        <!--END OF TESTIMONIAL 1 -->
+                        <!--TESTIMONIAL 2 -->
+                        <div class="item">
+                            <div class="shadow-effect">
+                                <img class="img-circle" src="./img/test.jpg" alt="">
+                                <p>Switching to Jal Science's sewage treatment solution was a game-changer for us. Not
+                                    only did it eliminate the need for electricity, but it also provided a seamless,
+                                    eco-friendly alternative to conventional systems. </p>
+                            </div>
+                            <div class="testimonial-name">Ashwanth</div>
+                        </div>
+                        <!--END OF TESTIMONIAL 2 -->
+                        <!--TESTIMONIAL 3 -->
+                        <div class="item">
+                            <div class="shadow-effect">
+                                <img class="img-circle" src="./img/test.jpg" alt="">
+                                <p>Switching to Jal Science's sewage treatment solution was a game-changer for us. Not
+                                    only did it eliminate the need for electricity, but it also provided a seamless,
+                                    eco-friendly alternative to conventional systems. </p>
+                            </div>
+                            <div class="testimonial-name">Ashwanth</div>
+                        </div>
+                        <!--END OF TESTIMONIAL 3 -->
+                        <!--TESTIMONIAL 4 -->
+                        <div class="item">
+                            <div class="shadow-effect">
+                                <img class="img-circle" src="./img/test.jpg" alt="">
+                                <p>Switching to Jal Science's sewage treatment solution was a game-changer for us. Not
+                                    only did it eliminate the need for electricity, but it also provided a seamless,
+                                    eco-friendly alternative to conventional systems. </p>
+                            </div>
+                            <div class="testimonial-name">Ashwanth</div>
+                        </div>
+                        <!--END OF TESTIMONIAL 4 -->
+                        <!--TESTIMONIAL 5 -->
+                        <div class="item">
+                            <div class="shadow-effect">
+                                <img class="img-circle" src="./img/test.jpg" alt="">
+                                <p>Switching to Jal Science's sewage treatment solution was a game-changer for us. Not
+                                    only did it eliminate the need for electricity, but it also provided a seamless,
+                                    eco-friendly alternative to conventional systems. </p>
+                            </div>
+                            <div class="testimonial-name">Ashwanth</div>
+                        </div>
+                        <!--END OF TESTIMONIAL 5 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END OF TESTIMONIALS -->
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer py-5">
+        <div class="container py-5">
+            <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                <div class="row g-4">
+                    <div class="col-lg-3">
+                        <a href="#" class="d-flex flex-column flex-wrap">
+                            <img src="img/logo.png" style="width: 10rem;">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6 col-xl-3">
+                    <div class="footer-item-1">
+                        <h4 class="mb-4 text-white">Get In Touch</h4>
+                        <p class="text-secondary line-h">Address: <span class="text-white">517, Samudra Gupta Mourya
+                                Road, Gavipuram Extension, Bangalore 560019</span>
+                        </p>
+                        <p class="text-secondary line-h">Email: <span class="text-white">info@Varunawater.com</span></p>
+                        <p class="text-secondary line-h">Phone: <span class="text-white">+91 9731333092</span></p>
+                        <div class="d-flex line-h">
+                            <a class="btn btn-light me-2 btn-md-square rounded-circle" href=""><i
+                                    class="fab fa-twitter text-dark"></i></a>
+                            <a class="btn btn-light me-2 btn-md-square rounded-circle" href=""><i
+                                    class="fab fa-facebook-f text-dark"></i></a>
+                            <a class="btn btn-light me-2 btn-md-square rounded-circle" href=""><i
+                                    class="fab fa-youtube text-dark"></i></a>
+                            <a class="btn btn-light btn-md-square rounded-circle" href=""><i
+                                    class="fab fa-linkedin-in text-dark"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-xl-3">
+                    <div class="d-flex flex-column text-start footer-item-3">
+                        <h4 class="mb-4 text-white">Quick Links</h4>
+                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                            Home</a>
+                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                            Domestic STP's</a>
+                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                            Commercial STP's</a>
+                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                            Clients</a>
+                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                            Blogs</a>
+                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                            Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-3">
+
+                    <h4 class="mb-4 text-white">Contact Us</h4>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Leave a comment here"
+                            id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">Message</label>
+                    </div>
+                    <button type="button" class="btn btn-primary">Submit</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Banner Start -->
+    <div class="container-fluid py-5 my-5"
+        style="background: linear-gradient(rgba(202, 203, 185, 1), rgba(202, 203, 185, 1));">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center">
+                    <a href="index.html" class="navbar-brand mb-3">
+                        <img src="img/Asset 3.png" style="width: 15rem;">
+                    </a>
+                    <p>Varuna Company</p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-2 border-white rounded-circle back-to-top"><i
+            class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>jQuery(document).ready(function ($) {
+            "use strict";
+            //  TESTIMONIALS CAROUSEL HOOK
+            $('#customers-testimonials').owlCarousel({
+                loop: true,
+                center: true,
+                items: 3,
+                margin: 0,
+                autoplay: true,
+                dots: true,
+                autoplayTimeout: 8500,
+                smartSpeed: 450,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1170: {
+                        items: 3
+                    }
+                }
+            });
+        });</script>
+</body>
+
+</html>
