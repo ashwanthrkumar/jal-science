@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Newsers - Free HTML Magazine Template</title>
+    <title>Jal Science</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -119,6 +119,150 @@
             transition: all 250ms ease-out 0s;
             width: 20px;
         }
+
+
+        .hero {
+            display: flex;
+            height: 70vh;
+            /* Full viewport height */
+            position: relative;
+            /* Relative positioning for absolute child elements */
+        }
+
+        .hero-half {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: white;
+            position: relative;
+
+            /* For positioning the images */
+        }
+
+        .left {
+            background-color: #00acf5;
+            /* Blue */
+        }
+
+        .right {
+            background-color: #4686e0;
+            /* Red */
+        }
+
+        h2 {
+
+            margin-bottom: 10px;
+        }
+
+        .title-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f1f1f1;
+        }
+
+        .image-left,
+        .image-right {
+            position: absolute;
+            top: 97%;
+            width: 200px;
+            /* Adjust as needed */
+            height: 200px;
+            /* Adjust as needed */
+            border-radius: 50%;
+            border: 13px solid white;
+            /* Border around the image */
+            transform: translateY(-50%);
+        }
+
+        .image-left {
+            left: 25vw;
+            transform: translate(-50%, -50%);
+        }
+
+        .image-right {
+            right: 25vw;
+            transform: translate(50%, -50%);
+        }
+
+        .hero-half.right i,
+        .hero-half.left i {
+            font-size: 27px;
+            /* Adjust as needed */
+            margin-right: 10px;
+            /* Spacing between icon and text */
+        }
+
+
+
+        /* Desktop version */
+        @media (min-width: 1024px) {
+            .desktop-section {
+                display: block;
+            }
+
+            .mobile-section {
+                display: none;
+            }
+
+            /* Add your desktop-specific styles here */
+        }
+
+        /* Mobile version */
+        @media (max-width: 1023px) {
+            .desktop-section {
+                display: none;
+            }
+
+            .mobile-section {
+                display: block;
+            }
+
+            /* Add your mobile-specific styles here */
+        }
+
+        @media only screen and (max-width: 600px) {
+            .hero-mobile {
+                display: flex;
+                flex-direction: column;
+                height: 50vh;
+                /* Half of the viewport height */
+            }
+
+            .hero-half-mobile {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                color: white;
+                position: relative;
+            }
+
+            .text-content {
+                margin-top: 10px;
+                padding-left: 5vw;
+            }
+        }
     </style>
 </head>
 
@@ -154,23 +298,25 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid bg-light">
+        <div class="container-fluid bg-light-nav">
             <div class="container px-0">
                 <nav class="navbar navbar-light navbar-expand-xl">
                     <a href="index.html" class="navbar-brand ">
-                        <img src="img/logo.png" style="width: 10rem;">
+                        <img src="img/logo_w.png" style="width: 10rem;">
                     </a>
                     <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars text-primary"></span>
+                        <span class="fa fa-bars " style="color: white;"></span>
                     </button>
-                    <div class="collapse navbar-collapse bg-light py-3" id="navbarCollapse">
-                        <div class="navbar-nav mx-auto border-top">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <div class="collapse navbar-collapse bg-light-nav py-3" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto border-top" style="-webkit-text-fill-color: white;">
+                            <a href="index.html" class="nav-item nav-link "
+                                style="-webkit-text-fill-color: white;">Home</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Domestic Sewage
                                     Treatment Plant</a>
-                                <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                <div class="dropdown-menu m-0 bg-secondary rounded-0"
+                                    style="-webkit-text-fill-color: black;">
                                     <a href="#" class="dropdown-item">Dropdown 1</a>
                                     <a href="#" class="dropdown-item">Dropdown 2</a>
                                     <a href="#" class="dropdown-item">Dropdown 3</a>
@@ -180,17 +326,20 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Commercial Sewage
                                     Treatment Plant</a>
-                                <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                <div class="dropdown-menu m-0 bg-secondary rounded-0"
+                                    style="-webkit-text-fill-color: black;">
                                     <a href="#" class="dropdown-item">Dropdown 1</a>
                                     <a href="#" class="dropdown-item">Dropdown 2</a>
                                     <a href="#" class="dropdown-item">Dropdown 3</a>
                                     <a href="#" class="dropdown-item">Dropdown 4</a>
                                 </div>
                             </div>
-                            <a href="detail-page.html" class="nav-item nav-link">Clients</a>
+                            <a href="detail-page.html" class="nav-item nav-link"
+                                style="-webkit-text-fill-color: white;">Clients</a>
                             <a href="404.html" class="nav-item nav-link">Blogs</a>
 
-                            <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                            <a href="contact.html" class="nav-item nav-link"
+                                style="-webkit-text-fill-color: white;">Contact Us</a>
                         </div>
                         <a href="detail-page.html" class="nav-item nav-link"><button type="button"
                                 class="btn btn-danger breathing-button">Quick Enquiry</button>
@@ -207,7 +356,7 @@
 
 
     <!-- Features Start -->
-    <div class="container-fluid features mb-5">
+    <!-- <div class="container-fluid features mb-5">
         <div class="container py-5">
             <div class="row g-4 justify-content-center mx-auto">
                 <div class="col-md-6 col-lg-6 col-xl-3 ">
@@ -267,16 +416,78 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- Features End -->
+    <div class="desktop-section">
+
+        <section class="hero">
+            <div class="hero-half left">
+                <div class="title-container">
+                    <i class="fas fa-home" style="font-size: 50px;"></i>
+                    <h2 style="-webkit-text-fill-color: white;">Home Sewage <br>
+                        Treatment Solution</h2>
+                </div>
+                <p>Say goodbye to septic tank.
+                    Say hello to bio-tank!</p>
+                <a href="index.html"><button type="button" class="btn btn-outline-light">Click
+                        here</button></a>
+            </div>
+            <div class="hero-half right">
+                <div class="title-container">
+                    <i class="fas fa-building" style="font-size: 50px;"></i>
+                    <h2 style="-webkit-text-fill-color: white;">Commercial Sewage <br>
+                        Treatment Plant</h2>
+                </div>
+
+                <p>Non-electric, compact and eco-friendly solution.</p>
+                <a href="index.html"><button type="button" class="btn btn-outline-light">Click
+                        here</button></a>
+            </div>
+            <div class="desktop-section">
+                <img src="img/cstp.jpg" alt="Left Image" class="image-right">
+                <img src="img/dstp.jpg" alt="Right Image" class="image-left">
+            </div>
+        </section>
+    </div>
 
 
+    <div class="mobile-section">
+        <section class="hero-mobile">
+            <div class="hero-half-mobile left">
+                <div class="title-container">
+                    <i class="fas fa-home" style="font-size: 50px;"></i>
+                    <div class="text-content">
+                        <h2>Home Sewage <br>
+                            Treatment Solution</h2>
+                        <p>Say goodbye to septic tank.
+                            Say hello to bio-tank!</p>
+                        <a href="index.html"><button type="button" class="btn btn-outline-light">Click
+                                here</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-half-mobile right">
+                <div class="title-container">
+                    <i class="fas fa-building" style="font-size: 50px;"></i>
+                    <div class="text-content">
+                        <h2>Commercial Sewage <br>
+                            Treatment Plant</h2>
+                        <p>Non-electric, compact and eco-friendly solution.</p>
+                        <a href="index.html"><button type="button" class="btn btn-outline-light">Click
+                                here</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
+    <br>
+    <br>
 
     <!-- Banner Start -->
-    <div class="container-fluid py-5 my-5"
+    <div class="container-fluid py-8 my-5"
         style="background: linear-gradient(rgba(202, 203, 185, 1), rgba(202, 203, 185, 1));">
         <div class="container">
             <div class="row g-4 align-items-center">
@@ -466,7 +677,7 @@
                 <div class="row g-4">
                     <div class="col-lg-3">
                         <a href="#" class="d-flex flex-column flex-wrap">
-                            <img src="img/logo.png" style="width: 10rem;">
+                            <img src="img/logo_w.png" style="width: 10rem;">
                         </a>
                     </div>
 
