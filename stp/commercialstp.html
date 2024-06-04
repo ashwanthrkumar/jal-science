@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home Sewage Treatment Solution | Jal Science</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@100;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <style>
+        .img-circle {
+            border-radius: 50%;
+            /* Set border radius to 50% for circular shape */
+
+        }
+
+        .shadow-effect {
+            background: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+            border: 1px solid #ECECEC;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10), 0 15px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        #customers-testimonials .shadow-effect p {
+            font-family: inherit;
+            font-size: 17px;
+            line-height: 1.5;
+            margin: 0 0 17px 0;
+            font-weight: 300;
+        }
+
+        .testimonial-name {
+            margin: -17px auto 0;
+            display: table;
+            width: auto;
+            background: #3190E7;
+            padding: 9px 35px;
+            border-radius: 12px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 9px 18px rgba(0, 0, 0, 0.12), 0 5px 7px rgba(0, 0, 0, 0.05);
+        }
+
+        #customers-testimonials .item {
+            text-align: center;
+            padding: 50px;
+            margin-bottom: 80px;
+            opacity: .2;
+            -webkit-transform: scale3d(0.8, 0.8, 1);
+            transform: scale3d(0.8, 0.8, 1);
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #customers-testimonials .owl-item.active.center .item {
+            opacity: 1;
+            -webkit-transform: scale3d(1.0, 1.0, 1);
+            transform: scale3d(1.0, 1.0, 1);
+        }
+
+        .owl-carousel .owl-item img {
+            transform-style: preserve-3d;
+            max-width: 90px;
+            margin: 0 auto 17px;
+        }
+
+        #customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
+        #customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+            background: #3190E7;
+            transform: translate3d(0px, -50%, 0px) scale(0.7);
+        }
+
+        #customers-testimonials.owl-carousel .owl-dots {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        #customers-testimonials.owl-carousel .owl-dots .owl-dot {
+            display: inline-block;
+        }
+
+        #customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+            background: #3190E7;
+            display: inline-block;
+            height: 20px;
+            margin: 0 2px 5px;
+            transform: translate3d(0px, -50%, 0px) scale(0.3);
+            transform-origin: 50% 50% 0;
+            transition: all 250ms ease-out 0s;
+            width: 20px;
+        }
+
+
+        .hero {
+            display: flex;
+            height: 70vh;
+            /* Full viewport height */
+            position: relative;
+            /* Relative positioning for absolute child elements */
+        }
+
+        .hero-half {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: white;
+            position: relative;
+
+            /* For positioning the images */
+        }
+
+        .left {
+            background-color: #00acf5;
+            /* Blue */
+        }
+
+        .right {
+            background-color: #4686e0;
+            /* Red */
+        }
+
+        h2 {
+
+            margin-bottom: 10px;
+        }
+
+        .title-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f1f1f1;
+        }
+
+        .image-left,
+        .image-right {
+            position: absolute;
+            top: 97%;
+            width: 200px;
+            /* Adjust as needed */
+            height: 200px;
+            /* Adjust as needed */
+            border-radius: 50%;
+            border: 13px solid white;
+            /* Border around the image */
+            transform: translateY(-50%);
+        }
+
+        .image-left {
+            left: 25vw;
+            transform: translate(-50%, -50%);
+        }
+
+        .image-right {
+            right: 25vw;
+            transform: translate(50%, -50%);
+        }
+
+        .hero-half.right i,
+        .hero-half.left i {
+            font-size: 27px;
+            /* Adjust as needed */
+            margin-right: 10px;
+            /* Spacing between icon and text */
+        }
+
+
+
+        /* Desktop version */
+        @media (min-width: 1024px) {
+            .desktop-section {
+                display: block;
+            }
+
+            .mobile-section {
+                display: none;
+            }
+
+            /* Add your desktop-specific styles here */
+        }
+
+        /* Mobile version */
+        @media (max-width: 1023px) {
+            .desktop-section {
+                display: none;
+            }
+
+            .mobile-section {
+                display: block;
+            }
+
+            /* Add your mobile-specific styles here */
+        }
+
+        @media only screen and (max-width: 600px) {
+            .hero-mobile {
+                display: flex;
+                flex-direction: column;
+                height: 50vh;
+                /* Half of the viewport height */
+            }
+
+            .hero-half-mobile {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                color: white;
+                position: relative;
+            }
+
+            .text-content {
+                margin-top: 10px;
+                padding-left: 5vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar start -->
+    <div class="container-fluid sticky-top px-0">
+
+        <div class="container-fluid bg-light-nav">
+            <div class="container px-0">
+                <nav class="navbar navbar-light navbar-expand-xl">
+                    <a href="../index.html" class="navbar-brand ">
+                        <img src="../img/logo_w.png" style="width: 10rem;">
+                    </a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars " style="color: white;"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-light-nav py-3" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto border-top" style="-webkit-text-fill-color: white;">
+                            <a href="../index.html" class="nav-item nav-link "
+                                style="-webkit-text-fill-color: white;">Home</a>
+                            <div class="nav-item dropdown">
+                                <a href="../stp/domesticstp.html" class="nav-link dropdown-toggle"
+                                    data-bs-toggle="dropdown" style="-webkit-text-fill-color: white;">Domestic Sewage
+                                    Treatment Plant</a>
+                                <div class="dropdown-menu m-0 bg-secondary rounded-0"
+                                    style="-webkit-text-fill-color: black;">
+                                    <a href="#" class="dropdown-item">Dropdown 1</a>
+                                    <a href="#" class="dropdown-item">Dropdown 2</a>
+                                    <a href="#" class="dropdown-item">Dropdown 3</a>
+                                    <a href="#" class="dropdown-item">Dropdown 4</a>
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="../stp/commercialstp.html" class="nav-link dropdown-toggle"
+                                    data-bs-toggle="dropdown" style="-webkit-text-fill-color: white;">Commercial Sewage
+                                    Treatment Plant</a>
+                                <div class="dropdown-menu m-0 bg-secondary rounded-0"
+                                    style="-webkit-text-fill-color: black;">
+                                    <a href="#" class="dropdown-item">Dropdown 1</a>
+                                    <a href="#" class="dropdown-item">Dropdown 2</a>
+                                    <a href="#" class="dropdown-item">Dropdown 3</a>
+                                    <a href="#" class="dropdown-item">Dropdown 4</a>
+                                </div>
+                            </div>
+                            <a href="../detail-page.html" class="nav-item nav-link"
+                                style="-webkit-text-fill-color: white;">Clients</a>
+                            <a href="../404.html" class="nav-item nav-link">Blogs</a>
+
+                            <a href="../contact.html" class="nav-item nav-link"
+                                style="-webkit-text-fill-color: white;">Contact Us</a>
+                        </div>
+                        <a href="../detail-page.html" class="nav-item nav-link"><button type="button"
+                                class="btn btn-danger breathing-button">Quick Enquiry</button>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+
+
+
+    <!-- Features Start -->
+    <!-- <div class="container-fluid features mb-5">
+        <div class="container py-5">
+            <div class="row g-4 justify-content-center mx-auto">
+                <div class="col-md-6 col-lg-6 col-xl-3 ">
+                    <div class="row g-4 align-items-center features-item">
+                        <div class="col-4">
+                            <div class="rounded-circle position-relative">
+                                <div class="overflow-hidden rounded-circle">
+                                    <img src="img/dstp.jpg" class="img-zoomin-hero img-fluid rounded-circle w-100"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="features-content d-flex flex-column">
+                                <p class="text-uppercase-index-hero mb-1" style="font-family: 'Roboto'" ;>DOMESTIC</p>
+                                <a href="#" class="h5" style="color: white;">
+                                    Sewage Treatment Solution
+                                </a>
+                                <small class="text-body-hero d-block" style="color: white;">Say goodbye to septic tank.
+                                    Say hello to bio-tank!</small>
+                                <br>
+                                <a href="index.html"><button type="button" class="btn btn-outline-light">Click
+                                        here</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="row g-4 align-items-center features-item">
+                        <div class="col-4">
+                            <div class="rounded-circle position-relative">
+                                <div class="overflow-hidden rounded-circle">
+                                    <img src="img/cstp.jpg" class="img-zoomin-hero img-fluid rounded-circle w-100"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="features-content d-flex flex-column">
+                                <p class="text-uppercase-index-hero mb-1" style="font-family: 'Roboto'" ;>COMMERCIAL</p>
+                                <a href="#" class="h5" style="color: white;">
+                                    Sewage Treatment Plant
+                                </a>
+                                <small class="text-body-hero d-block" style="color: white;">Non-electric, compact and
+                                    eco-friendly solution.</small>
+                                <br>
+                                <a href="index.html"><button type="button" class="btn btn-outline-light">Click
+                                        here</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div> -->
+
+    <!-- option to add text for image -->
+    <!-- <div class="domestic-hero">
+        <div class="domestic-hero-text">
+            <h1>Welcome to My Website</h1>
+            <p>Discover amazing content here</p>
+        </div>
+    </div> -->
+    <img src="../img/cstp.jpeg" style="width: 100%;" />
+    <!-- <div class="desktop-section">
+        
+        <section class="hero">
+            <div class="hero-half left">
+                <div class="title-container">
+                    <i class="fas fa-home" style="font-size: 50px;"></i>
+                    <h2 style="-webkit-text-fill-color: white;">Home Sewage <br>
+                        Treatment Solution</h2>
+                </div>
+                <p>Say goodbye to septic tank.
+                    Say hello to bio-tank!</p>
+                <a href="html"><button type="button" class="btn btn-outline-light">Click
+                        here</button></a>
+            </div>
+            <div class="hero-half right">
+                <div class="title-container">
+                    <i class="fas fa-building" style="font-size: 50px;"></i>
+                    <h2 style="-webkit-text-fill-color: white;">Commercial Sewage <br>
+                        Treatment Plant</h2>
+                </div>
+
+                <p>Non-electric, compact and eco-friendly solution.</p>
+                <a href="index.html"><button type="button" class="btn btn-outline-light">Click
+                        here</button></a>
+            </div>
+            <div class="desktop-section">
+                <img src="../img/cstp.jpg" alt="Left Image" class="image-right">
+                <img src="../img/dstp.jpg" alt="Right Image" class="image-left">
+            </div>
+        </section>
+    </div> -->
+
+
+    <!-- <div class="mobile-section">
+        <section class="hero-mobile">
+            <div class="hero-half-mobile left">
+                <div class="title-container">
+                    <i class="fas fa-home" style="font-size: 50px;"></i>
+                    <div class="text-content">
+                        <h2>Home Sewage <br>
+                            Treatment Solution</h2>
+                        <p>Say goodbye to septic tank.
+                            Say hello to bio-tank!</p>
+                        <a href="index.html"><button type="button" class="btn btn-outline-light">Click
+                                here</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-half-mobile right">
+                <div class="title-container">
+                    <i class="fas fa-building" style="font-size: 50px;"></i>
+                    <div class="text-content">
+                        <h2>Commercial Sewage <br>
+                            Treatment Plant</h2>
+                        <p>Non-electric, compact and eco-friendly solution.</p>
+                        <a href="index.html"><button type="button" class="btn btn-outline-light">Click
+                                here</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> -->
+
+
+
+    <!-- Banner Start -->
+    <!-- <div class="container-fluid py-8 my-5"
+        style="background: linear-gradient(rgba(202, 203, 185, 1), rgba(202, 203, 185, 1));">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center">
+                    <a href="../index.html" class="navbar-brand mb-3">
+                        <img src="../img/logo.png" style="width: 10rem;">
+                    </a>
+                    <h2 class="mb-4">India's First Non-electric Modular Concrete Sewage Treatment Solution</h2>
+                    <p class="text-dark mb-4 pb-2">An innovative advanced sewage treatment solution that uses Anaerobic
+                        Biodigestion Reactor Technology (ABRT) that converts household sewage water into clear,
+                        odourless water. Treated water can be used for gardening or groundwater recharge. Jal Science,
+                        non-filling bio-tank provides you with an economic and environmentally friendly solution for
+                        wastewater treatment. It's an Easy, convenient and painless way of sewage treatment./p>
+                </div>
+
+
+            </div>
+        </div>
+    </div> -->
+    <!-- Banner End -->
+
+    <div class="text-dstp-desktop">
+        <h2 style="-webkit-text-fill-color: #0195D1;">Non-electric,Compact <strong></strong>Sewage Treatment Plant
+            (STP)</strong></h2>
+        <p>Bioman is a revolutionary non-electric, compact and eco-friendly sewage treatment solution that is proven to
+            be better than conventional sewage treatment plants. This innovative solution has no mechanical or
+            electrical components and hence incurs minimal running or maintenance expenses.
+            <br>
+            With a low carbon footprint and long-life bio filter media, Bioman is an ideal solution for institutions to
+            factories, offices to commercial complexes, high-rise apartments to high-tech campuses, hotels to resorts
+            and more.
+        </p>
+
+    </div>
+    <div class="gap"></div>
+    <div class="center">
+        <img src="../img/cstp1.jpeg" style="width: 80%; " />
+    </div>
+    <div class="gap"></div>
+    <!-- <div class="mobile-section">
+        <div class="text-dstp-mobile">
+            <h2 style="-webkit-text-fill-color: #0195D1;"><strong>Say goodbye to septic tank. Say hello to Bio Septic
+                    Tank!</strong></h2>
+            <p>Presenting Jal Science non-filling sewage treatment solution. Easy, convenient and painless way of sewage
+                disposal.No need to call lorry
+                to clean your septic tank</p>
+        </div>
+    </div> -->
+
+    <div class="text-dstp-desktop">
+        <h2 style="-webkit-text-fill-color: #0195D1;"><strong>Easier to maintain. Easiest on your budget! - STP
+                Plant</strong>
+        </h2>
+        <p>Capable of treating up to 100 KLD per day, Bioman is fully pre-assembled to allow quick and easy
+            installation. It is housed in single or multiple concrete tanks with capacity to treat 15 to 100 KLD (50 to
+            1,000 people).
+            <br>
+            The system features sludge reduction by advanced anaerobic technology and its smartness lies in how well it
+            works and how little maintenance it requires.
+            <br>
+            Bioman® has been designed to process waste water to achieve 95% reduction in both COB and BOD and meets the
+            pollution control board norms.
+
+        </p>
+
+    </div>
+    <div class="img-dstp">
+        <img src="../img/dstp3.jpg" alt="Photo 1">
+        <img src="../img/dstp3.jpg" alt="Photo 2">
+    </div>
+    <!-- <div class="img-dstp">
+        <img src="../img/dstp2.jpeg" />
+    </div> -->
+
+    <div class="text-dstp-desktop">
+        <h2 style="-webkit-text-fill-color: #0195D1;"><strong>How Does Bioman STP Plant Works?</strong>
+        </h2>
+        <p>Bioman is ingeniously designed to work intelligently. The right combination and dimensions of the modules
+            make Bioman® successful.
+
+        </p>
+        <h2 style="-webkit-text-fill-color: #0195D1;">Process Diagram
+        </h2>
+
+    </div>
+    <div class="center">
+        <img src="../img/cstp2.jpg" style=" width: 80%; " />
+    </div>
+
+    <div class="text-dstp-desktop">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">1. Settler/
+                        Equalization Tank</h2>
+                    <p style="text-align: left;">The settler is a closed tank consisting of two or three chambers
+                        with 16-24 hours of retention time that traps a significant
+                        portion of heavier solids and floating particles while letting
+                        the rest pass into the following modules.</p>
+                    <table class="table-bordered">
+                        <tbody>
+                            <tr style=" background-color: #ffffff;">
+                                <td style="-webkit-text-fill-color: #0195D1;">Stage -</td>
+                                <td>Primary Treatment</td>
+
+                            </tr>
+                            <tr style=" background-color: #ffffff;">
+                                <td style="-webkit-text-fill-color: #0195D1;">Efficiency -</td>
+                                <td>20-30%</td>
+                            </tr>
+                            <tr>
+                                <td style="-webkit-text-fill-color: #0195D1;">Maintenance -</td>
+                                <td>Monthly inspection of wastewater flow Monthly removal of scum Removal of sludge -
+                                    once in 3-5 years</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="col">
+                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">2. Anaerobic
+                        Baffle Reactor</h2>
+                    <p style="text-align: left;">Consists of multiple chambers in series, connected with down take
+                        pipes. The wastewater is made to pass in an up-flow fashion, thereby establishing a contact with
+                        sludge blanket formed at the bottom. The combination of sedimentation and anaerobic sludge
+                        digestion ensures removal of suspended and colloidal particles.</p>
+                    <table class="table-bordered">
+                        <tbody>
+                            <tr style=" background-color: #ffffff;">
+                                <td style="-webkit-text-fill-color: #0195D1;">Stage -</td>
+                                <td>Treatment</td>
+
+                            </tr>
+                            <tr style=" background-color: #ffffff;">
+                                <td style="-webkit-text-fill-color: #0195D1;">Efficiency -</td>
+                                <td>65-80%</td>
+                            </tr>
+                            <tr>
+                                <td style="-webkit-text-fill-color: #0195D1;">Maintenance -</td>
+                                <td>Monthly inspection of WW flow Desludging every 5 years</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col">
+                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">3. Biofilm
+                        Filter Media</h2>
+                    <p style="text-align: left;">Consists of up-flow chambers connected in series, partially filled with
+                        Bio filter media. The biofilm formed on filter media traps and degrades finer suspended organic
+                        particles when wastewater passes through it. The pipes, specially designed plastic media is used
+                        for better performance</p>
+                    <table class="table-bordered">
+                        <tbody>
+                            <tr style=" background-color: #ffffff;">
+                                <td style="-webkit-text-fill-color: #0195D1;">Stage -</td>
+                                <td>Advanced secondary treatment</td>
+
+                            </tr>
+                            <tr style=" background-color: #ffffff;">
+                                <td style="-webkit-text-fill-color: #0195D1;">Efficiency -</td>
+                                <td>75 - 90%</td>
+                            </tr>
+                            <tr>
+                                <td style="-webkit-text-fill-color: #0195D1;">Maintenance -</td>
+                                <td>Monthly inspection of WW flow Desludging every
+                                    5 years. Washing of filter media- when treatment efficiency reduces</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div class="col">
+
+                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">4. Reed
+                        Bed/PGF</h2>
+                    <p style="text-align: left;">A shallow concrete tanks of graded gravel or pebbles and selected
+                        species of plants (such as Reed, Canna indica or Cyperus papyrus) to treat remaining pollutants
+                        by biological conversion, filtration and surface aeration. It can be integrated into the
+                        landscape.</p>
+                    <table class="table-bordered">
+                        <tbody>
+                            <tr style=" background-color: #ffffff;">
+                                <td style="-webkit-text-fill-color: #0195D1;">Stage -</td>
+                                <td>Tertiary Treatment</td>
+
+                            </tr>
+                            <tr style=" background-color: #ffffff;">
+                                <td style="-webkit-text-fill-color: #0195D1;">Efficiency -</td>
+                                <td>80 - 95%</td>
+                            </tr>
+                            <tr>
+                                <td style="-webkit-text-fill-color: #0195D1;">Maintenance -</td>
+                                <td>Monthly removal of weeds from top Trimming of plants once in 3 months</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col">
+                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">5.
+                        Disinfection / Ozonation Tank</h2>
+                    <p style="text-align: left;">A concrete tank with disinfectant doser is used to kill bacteria, virus
+                        and other microbes in water in particular chlorination is used to prevent the spread of
+                        waterborne diseases We can alternatively use Ozone as a powerful oxidising agent which will
+                        dissolved in water produces a broad spectrum biocide that destroys all bacteria, viruses and
+                        cysts.</p>
+                    <table class="table-bordered">
+                        <tbody>
+                            <tr style=" background-color: #ffffff;">
+                                <td style="-webkit-text-fill-color: #0195D1;">Stage -</td>
+                                <td>Post treatment</td>
+
+                            </tr>
+                            <tr style=" background-color: #ffffff;">
+                                <td style="-webkit-text-fill-color: #0195D1;">Efficiency -</td>
+                                <td>90-97 %</td>
+                            </tr>
+                            <tr>
+                                <td style="-webkit-text-fill-color: #0195D1;">Maintenance -</td>
+                                <td>Periodical filling of chlorine</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div class="col">
+
+                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">6. Percolation
+                        Wells</h2>
+                    <p style="text-align: left;">Treated water can be used for gardening, irrigation, surface disposal,
+                        or toilet flushing when the above options are limited we can provide percolation wells for
+                        partial disposal of treated water in the ground</p>
+                    <table class="table-bordered">
+                        <tbody>
+                            <tr style=" background-color: #ffffff;">
+                                <td style="-webkit-text-fill-color: #0195D1;">Stage -</td>
+                                <td>Disposal options</td>
+
+                            </tr>
+
+                            <tr style=" background-color: #ffffff;">
+                                <td style="-webkit-text-fill-color: #0195D1;">Maintenance -</td>
+                                <td>Monthly removal of weeds from top Trimming of plants once in 3 monthsQuarterly
+                                    inspection and preventive maintenance for chocking</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class=" table-container">
+        <h2 style="font-family: 'Roboto' ; -webkit-text-fill-color: #0195D1;">Smart returns for your hard-earned
+            money!
+        </h2>
+        <p>Your investment in Bioman will give you returns within 48 months. And then a lifetime of peace and
+            comfort!
+        </p>
+
+        <div class="designer-line"></div>
+        <table class="table-bordered">
+            <thead>
+                <tr>
+                    <th>Investment</th>
+                    <th>₹ 95,000</th>
+                    <th>₹ 1,15,000</th>
+                </tr>
+                <tr>
+                    <th>Year</th>
+                    <th>Conventional Septic Tank Sewage removal cost per year (in ₹)</th>
+                    <th>Jal Science Bio-tank Operating cost per year (in ₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>12,000</td>
+                    <td>3,000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>24,000</td>
+                    <td>3,000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>24,000</td>
+                    <td>3,000</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>24,000</td>
+                    <td>3,000</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>24,000</td>
+                    <td>3,000</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>24,000</td>
+                    <td>3,000</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>24,000</td>
+                    <td>3,000</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>24,000</td>
+                    <td>3,000</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>24,000</td>
+                    <td>3,000</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>24,000</td>
+                    <td>3,000</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>2,28,000</td>
+                    <td>30,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="text-dstp-desktop">
+        <h2 style="-webkit-text-fill-color: #0195D1;"><strong>How to order Bio Septic Tank?</strong>
+        </h2>
+        <p>Call Bioman - 73877 73877 or mail us at ask@bioman.co.in</p>
+        <ul>
+            <li>Our sales officer would visit you.</li>
+            <li>If required, we would prepare a wastewater report.</li>
+            <li>An estimation would be sent to you.</li>
+            <li>Design and layout drawings would be presented.</li>
+            <li>On approval, our technical team will excavate the land.</li>
+            <li>Our pre-assembled solution would be set up within a short span of time.</li>
+            <li>Treatment process begins. Your worries end.</li>
+
+        </ul>
+
+    </div>
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer py-5">
+        <div class="container py-5">
+            <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                <div class="row g-4">
+                    <div class="col-lg-3">
+                        <a href="#" class="d-flex flex-column flex-wrap">
+                            <img src="../img/logo_w.png" style="width: 10rem;">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6 col-xl-3">
+                    <div class="footer-item-1">
+                        <h4 class="mb-4 text-white">Get In Touch</h4>
+                        <p class="text-secondary line-h">Address: <span class="text-white">517, Samudra Gupta Mourya
+                                Road, Gavipuram Extension, Bangalore 560019</span>
+                        </p>
+                        <p class="text-secondary line-h">Email: <span class="text-white">info@Varunawater.com</span>
+                        </p>
+                        <p class="text-secondary line-h">Phone: <span class="text-white">+91 9731333092</span></p>
+                        <div class="d-flex line-h">
+                            <a class="btn btn-light me-2 btn-md-square rounded-circle" href=""><i
+                                    class="fab fa-twitter text-dark"></i></a>
+                            <a class="btn btn-light me-2 btn-md-square rounded-circle" href=""><i
+                                    class="fab fa-facebook-f text-dark"></i></a>
+                            <a class="btn btn-light me-2 btn-md-square rounded-circle" href=""><i
+                                    class="fab fa-youtube text-dark"></i></a>
+                            <a class="btn btn-light btn-md-square rounded-circle" href=""><i
+                                    class="fab fa-linkedin-in text-dark"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-xl-3">
+                    <div class="d-flex flex-column text-start footer-item-3">
+                        <h4 class="mb-4 text-white">Quick Links</h4>
+                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                            Home</a>
+                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                            Domestic STP's</a>
+                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                            Commercial STP's</a>
+                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                            Clients</a>
+                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                            Blogs</a>
+                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                            Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-3">
+
+                    <h4 class="mb-4 text-white">Contact Us</h4>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Leave a comment here"
+                            id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">Message</label>
+                    </div>
+                    <button type="button" class="btn btn-primary">Submit</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Banner Start -->
+    <div class="container-fluid py-5 my-5"
+        style="background: linear-gradient(rgba(202, 203, 185, 1), rgba(202, 203, 185, 1));">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center">
+                    <a href="../index.html" class="navbar-brand mb-3">
+                        <img src="../img/Asset 3.png" style="width: 15rem;">
+                    </a>
+                    <p>Varuna Company</p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-2 border-white rounded-circle back-to-top"><i
+            class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+    <script>jQuery(document).ready(function ($) {
+            "use strict";
+            //  TESTIMONIALS CAROUSEL HOOK
+            $('#customers-testimonials').owlCarousel({
+                loop: true,
+                center: true,
+                items: 3,
+                margin: 0,
+                autoplay: true,
+                dots: true,
+                autoplayTimeout: 8500,
+                smartSpeed: 450,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1170: {
+                        items: 3
+                    }
+                }
+            });
+        });</script>
+</body>
+
+</html>
