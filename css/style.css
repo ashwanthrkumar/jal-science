@@ -1,3 +1,18 @@
+.container-fluid-index {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto
+}
+
+/* Styles for mobile devices for index file banner */
+@media (max-width: 767px) {
+    .container-fluid-index {
+        padding-top: 10rem;
+    }
+}
+
 .img-dstp {
     display: flex;
     flex-wrap: wrap;
@@ -24,6 +39,11 @@
 /* Domestic Hero */
 .gap {
     height: calc(2 * 1.5em);
+    /* 4 lines of text with a line-height of 1.5 */
+}
+
+.gap-1 {
+    height: calc(1 * 1.5em);
     /* 4 lines of text with a line-height of 1.5 */
 }
 
