@@ -1,17 +1,25 @@
+/* padding inside the index banner */
+.padding-class {
+    padding-top: 2.5rem;
+}
+
+/* style for the index banner in middle */
 .container-fluid-index {
     width: 100%;
+    padding-top: 2.5rem;
     padding-right: var(--bs-gutter-x, 0.75rem);
     padding-left: var(--bs-gutter-x, 0.75rem);
+    padding-bottom: 2.5rem;
     margin-right: auto;
     margin-left: auto
 }
 
 /* Styles for mobile devices for index file banner */
-/* @media (max-width: 767px) {
+@media (max-width: 767px) {
     .container-fluid-index {
-        padding-top: 10rem;
+        padding-top: 5rem;
     }
-} */
+}
 
 .img-dstp {
     display: flex;
