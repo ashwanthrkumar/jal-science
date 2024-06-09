@@ -17,7 +17,7 @@
 /* Styles for mobile devices for index file banner */
 @media (max-width: 767px) {
     .container-fluid-index {
-        padding-top: 5rem;
+        padding-top: 10rem;
     }
 }
 
