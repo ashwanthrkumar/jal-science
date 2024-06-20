@@ -263,6 +263,95 @@
                 padding-left: 5vw;
             }
         }
+
+        /* slideshow css */
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Verdana, sans-serif;
+        }
+
+
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            /* height: 100vh; */
+            width: 100%;
+            position: relative;
+            margin: 0;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
     </style>
 </head>
 
@@ -317,8 +406,7 @@
                                     <a href="#" class="dropdown-item">Dropdown 4</a>
                                 </div>
                             </div>
-                            <a href="../detail-page.html" class="nav-item nav-link"
-                                style="-webkit-text-fill-color: white;">Clients</a>
+
                             <a href="../404.html" class="nav-item nav-link">Blogs</a>
 
                             <a href="../contact.html" class="nav-item nav-link"
@@ -408,7 +496,50 @@
             <p>Discover amazing content here</p>
         </div>
     </div> -->
-    <img src="../img/dstp1.jpg" style="width: 100%;" />
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="../img/dslide1.jpg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="../img/dslide2.jpg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="../img/dslide3.jpg" style="width:100%">
+
+        </div>
+        <div class="mySlides fade">
+
+            <img src="../img/dslide4.png" style="width:100%">
+
+        </div>
+        <div class="mySlides fade">
+
+            <img src="../img/dslide5.png" style="width:100%">
+
+        </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <!-- <img src="../img/dstp1.jpg" style="width: 100%;" /> -->
+
+
+
+
     <!-- <div class="desktop-section">
         
         <section class="hero">
@@ -521,7 +652,8 @@
     </div> -->
 
     <div class="text-dstp-desktop">
-        <h2 style="-webkit-text-fill-color: #0195D1;"><strong>How Does Jal Science - Bio Septic Tank Works?</strong>
+        <h2 style="-webkit-text-fill-color: #0195D1;"><strong>How Does Jal Science - Bio-Pure Septic Tank
+                Works?</strong>
         </h2>
         <p>Jal Science's innovative sewage treatment Solution, inspired by a cow's digestive system, directly addresses
             several key goals outlined in the UN's Sustainable Development Goals (SDGs). Here's how our technology
@@ -571,16 +703,23 @@
     <div class="text-dstp-desktop">
         <h2 style="-webkit-text-fill-color: #0195D1;"><strong>What is Bio-Pure Septic Tank ?</strong>
         </h2>
-        <p>An RCC (Reinforced Cement Concrete) bio-Pure septic tank treats sewage and wastewater through a combination
-            of physical and biological processes. Wastewater enters the tank through an inlet chamber, where heavy
-            solids settle. Inside the tank, anaerobic bacteria break down organic matter without oxygen, reducing sludge
-            volume and converting waste into gases like methane and carbon dioxide. Solids settle at the bottom as
-            sludge, and lighter materials form scum, while the treated liquid, or effluent, moves to the next chamber.
-            Some systems have a secondary chamber for further treatment. The effluent exits through an outlet chamber
-            with a filter, trapping any remaining particles. Finally, the treated effluent is discharged into the soil
-            through a soak pit or leach field, or reused for irrigation, depending on the system design and local
-            regulations. This process significantly reduces pathogens and pollutants, making the water safe for disposal
-            or reuse. Treated water can be used for gardening or groundwater recharge. </p>
+        <ul>
+            <li>An RCC (Reinforced Cement Concrete) bio-Pure septic tank treats sewage and wastewater through a
+                combination of physical and biological processes.</li>
+            <li>Wastewater enters the tank through an inlet chamber, where heavy solids settle.</li>
+            <li>Inside the tank, anaerobic bacteria break down organic matter without oxygen, reducing sludge volume and
+                converting waste into gases like methane and carbon dioxide.</li>
+            <li>Solids settle at the bottom as sludge, and lighter materials form scum, while the treated liquid, or
+                effluent, moves to the next chamber.</li>
+            <li>Some systems have a secondary chamber for further treatment.</li>
+            <li>The effluent exits through an outlet chamber with a filter, trapping any remaining particles.</li>
+            <li>Finally, the treated effluent is discharged into the soil through a soak pit or leach field, or reused
+                for irrigation, depending on the system design and local regulations.</li>
+            <li>This process significantly reduces pathogens and pollutants, making the water safe for disposal or
+                reuse.</li>
+            <li>Treated water can be used for gardening or groundwater recharge.</li>
+        </ul>
+
 
         <div class="center">
             <img src="../img/domestic2.jpg" style="width: 80%; " />
@@ -598,11 +737,31 @@
         </ul>
         <h2 style="-webkit-text-fill-color: #0195D1;"><strong>Technical Specifications:</strong>
         </h2>
-        <ol>
-            <li><b style="-webkit-text-fill-color: #0195D1;">Capacity</b>: 5KL to 100 KL</li>
-            <li><b style="-webkit-text-fill-color: #0195D1;">Weight</b>: Approximately 5000 to 10000 kg</li>
-            <li><b style="-webkit-text-fill-color: #0195D1;">Material</b>: High-grade, durable construction</li>
-        </ol>
+        <table style="border: 1px solid #000; border-collapse: collapse; width: 100%;">
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left; background-color: #8fe3ff;">
+                        Capacity</td>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">5KL to 100 KL</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left; background-color: #8fe3ff;">
+                        Weight
+                    </td>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left; background-color: white;">5 Ton
+                        to 10 Ton</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;background-color: #8fe3ff;">
+                        Material</td>
+                    <td style="border: 1px solid #000; padding: 8px; text-align: left;">High-grade, durable construction
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
     </div>
     <!-- <div class="img-dstp">
         <img src="../img/dstp3.jpg" alt="Photo 1">
@@ -703,16 +862,13 @@
         </h3>
         <p>For inquiries and orders, reach us at:</p>
         <ul>
-            <li><b style="-webkit-text-fill-color: #0195D1;">Phone</b>: 7019169125</li>
-            <li><b style="-webkit-text-fill-color: #0195D1;">What's app</b> : 7019169125 </li>
+            <li><b style="-webkit-text-fill-color: #0195D1;">Phone/What's app</b>: 7019169125</li>
+
             <li><b style="-webkit-text-fill-color: #0195D1;">Email</b>: mailtojalscience@gmail.com</li>
             <li><b style="-webkit-text-fill-color: #0195D1;">Address</b>: No.1/1 7th Main Padarayanapura
                 Bangalore- 560026
             </li>
-            <li><b style="-webkit-text-fill-color: #0195D1;">Complete Project Details</b>: STP BIO Pure Tank <br>
-                Complete project details will be provided once
-                your
-                order is confirmed, ensuring a seamless and satisfactory experience.</li>
+
 
 
         </ul>
@@ -760,14 +916,16 @@
                 <div class="col-lg-6 col-xl-3">
                     <div class="d-flex flex-column text-start footer-item-3">
                         <h4 class="mb-4 text-white">Quick Links</h4>
-                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                        <a class="btn-link text-white" href="../home.html"><i
+                                class="fas fa-angle-right text-white me-2"></i>
                             Home</a>
-                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                        <a class="btn-link text-white" href="../stp/domesticstp.html"><i
+                                class="fas fa-angle-right text-white me-2"></i>
                             Domestic STP's</a>
-                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                        <a class="btn-link text-white" href="../stp/commercialstp.html"><i
+                                class="fas fa-angle-right text-white me-2"></i>
                             Commercial STP's</a>
-                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
-                            Clients</a>
+
                         <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
                             Blogs</a>
                         <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
@@ -799,23 +957,7 @@
     <!-- Footer End -->
 
 
-    <!-- Banner Start -->
-    <div class="container-fluid py-5 my-5"
-        style="background: linear-gradient(rgba(202, 203, 185, 1), rgba(202, 203, 185, 1));">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="d-flex flex-column align-items-center justify-content-center text-center">
-                    <a href="../home.html" class="navbar-brand mb-3">
-                        <img src="../img/Asset 3.png" style="width: 15rem;">
-                    </a>
-                    <p>Varuna Company</p>
-                </div>
 
-
-            </div>
-        </div>
-    </div>
-    <!-- Banner End -->
 
 
 
@@ -857,7 +999,26 @@
                     }
                 }
             });
-        });</script>
+        });
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }</script>
 </body>
 
 </html>
