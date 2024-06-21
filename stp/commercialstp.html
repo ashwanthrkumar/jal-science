@@ -263,6 +263,95 @@
                 padding-left: 5vw;
             }
         }
+
+        /* slideshow css */
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Verdana, sans-serif;
+        }
+
+
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            /* height: 100vh; */
+            width: 100%;
+            position: relative;
+            margin: 0;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
     </style>
 </head>
 
@@ -320,7 +409,8 @@
                                 </div>
                             </div>
 
-                            <a href="../404.html" class="nav-item nav-link">Blogs</a>
+                            <a href="../404.html" class="nav-item nav-link"
+                                style="-webkit-text-fill-color: white;">Blogs</a>
 
                             <a href="../contact.html" class="nav-item nav-link"
                                 style="-webkit-text-fill-color: white;">Contact Us</a>
@@ -409,7 +499,31 @@
             <p>Discover amazing content here</p>
         </div>
     </div> -->
-    <img src="../img/commercial1.png" style="width: 100%;" />
+
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="../img/commercial1.png" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+
+            <img src="../img/commercial4.jpg" style="width:100%">
+
+        </div>
+
+
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+    </div>
     <!-- <div class="desktop-section">
         
         <section class="hero">
@@ -499,7 +613,7 @@
     <!-- Banner End -->
 
     <div class="text-dstp-desktop">
-        <h2 style="-webkit-text-fill-color: #0195D1;"><strong>Commercial Sewage Treatment Plan</strong></h2>
+        <h2 style="-webkit-text-fill-color: #0195D1;"><strong>Commercial Sewage Treatment Plant</strong></h2>
         <p>The technology of reed beds or constructed wetlands is a highly efficient and eco-friendly wastewater
             treatment system that offers a lower cost and carbon footprint compared to traditional methods. By utilizing
             waste to generate new resources, reed beds play a crucial role in the regeneration of the natural
@@ -571,222 +685,85 @@
                     <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">1.
                         Pre-Treatment</h2>
                     <p style="text-align: left;">Wastewater is first pre-treated to remove large solids and debris. This
-                        can involve a primary settling tank where solids settle to the bottom and are removed.</p>
-                    <!-- <table class="table-bordered">
-                        <tbody>
-                            <tr style=" background-color: #ffffff;">
-                                <td style="-webkit-text-fill-color: #0195D1;">Stage -</td>
-                                <td>Primary Treatment</td>
-
-                            </tr>
-                            <tr style=" background-color: #ffffff;">
-                                <td style="-webkit-text-fill-color: #0195D1;">Efficiency -</td>
-                                <td>20-30%</td>
-                            </tr>
-                            <tr>
-                                <td style="-webkit-text-fill-color: #0195D1;">Maintenance -</td>
-                                <td>Monthly inspection of wastewater flow Monthly removal of scum Removal of sludge -
-                                    once in 3-5 years</td>
-                            </tr>
-                        </tbody>
-
-                    </table> -->
-                </div>
-                <div class="col">
-                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">2. Reed Bed
-                        System</h2>
-                    <p style="text-align: left;">Content to be given</p>
+                        can
+                        involve a primary settling tank where solids settle to the bottom and are removed.</p>
 
                 </div>
-            </div><br>
-            <div class="row">
                 <div class="col">
-                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">3. Reed Beds
-                    </h2>
-                    <p style="text-align: left;">The core of the system consists of reed beds, which are shallow basins
-                        filled with gravel or soil and planted with specific reed species (like Phragmites australis).
-                    </p>
-
-                </div>
-
-                <div class="col">
-
-                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">4. Reed
-                        Bed/PGF</h2>
-                    <p style="text-align: left;">A shallow concrete tanks of graded gravel or pebbles and selected
-                        species of plants (such as Reed, Canna indica or Cyperus papyrus) to treat remaining pollutants
-                        by biological conversion, filtration and surface aeration. It can be integrated into the
-                        landscape.</p>
+                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">2. Anaerobic
+                        Zones</h2>
+                    <ul style="text-align: left;">
+                        <li>The system creates anaerobic (oxygen-poor) zones Different microbes thrive in these
+                            zones, contributing to the breakdown of a wide range of contaminants.
+                        </li>
+                        <li>Anaerobic bacteria reduce sulfates and nitrates, removing them from the water. </li>
+                    </ul>
 
 
                 </div>
             </div><br>
             <div class="row">
                 <div class="col">
-                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">5.
-                        Root Zone Activity</h2>
-                    <p style="text-align: left;">The roots of these plants provide a large surface area for microbial
-                        biofilms to develop. These microbes are crucial for breaking down organic matter in the
-                        wastewater.</p>
+                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">3. Filtration
+                    </h2>
+                    <ul style="text-align: left;">
+                        <li>The core of the system consists of reed beds, which are shallow basins filled with gravel
+                            or soil and planted with specific reed species (like Phragmites australis).
+
+                        </li>
+                        <li>As wastewater flows through the reed bed, it is filtered by the substrate (gravel/soil),
+                            and contaminants are degraded by microbial action. </li>
+                    </ul>
+
 
                 </div>
 
                 <div class="col">
 
-                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">6. Filtration
-                    </h2>
-                    <p style="text-align: left;">As wastewater flows through the reed bed, it is filtered by the
-                        substrate (gravel/soil), and contaminants are degraded by microbial action. The plants also
-                        absorb some of the nutrients from the wastewater.</p>
+                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">4. Plant
+                        Absorption</h2>
+                    <ul style="text-align: left;">
+                        <li>The roots of the plants provide a large surface area for microbial biofilms to develop.
+                            These microbes are crucial for breaking down organic matter in the wastewater.
+
+
+                        </li>
+                        <li>Plants in the reed bed absorb nutrients like nitrogen and phosphorus, which helps to
+                            reduce the nutrient load in the water and prevent eutrophication when the treated
+                            water is discharged into natural water bodies.</li>
+                    </ul>
 
 
                 </div>
             </div><br>
-            <div class="row">
-                <div class="col">
-                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">7. Microbial
-                        Degradation
-                    </h2>
-                    <p style="text-align: left;">Content to be given</p>
-                </div>
-                <div class="col">
-                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">8. Aerobic and
-                        Anaerobic Zones
-                    </h2>
-                    <p style="text-align: left;">The system creates both aerobic (oxygen-rich) and anaerobic
-                        (oxygen-poor) zones. Different microbes thrive in these zones, contributing to the breakdown of
-                        a wide range of contaminants.</p>
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col">
-                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">9. Biological
-                        Processes
-                    </h2>
-                    <p style="text-align: left;">Aerobic bacteria oxidize organic pollutants to carbon dioxide and
-                        water, while anaerobic bacteria reduce sulfates and nitrates, removing them from the water.</p>
-                </div>
-                <div class="col">
-                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">10. Nutrient
-                        Uptake
-                    </h2>
-                    <p style="text-align: left;">Content to be given</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">11. Plant
-                        Absorption
-                    </h2>
-                    <p style="text-align: left;">Plants in the reed bed absorb nutrients like nitrogen and phosphorus,
-                        which helps to reduce the nutrient load in the water and prevent eutrophication when the treated
-                        water is discharged into natural water bodies.</p>
-                </div>
-                <div class="col">
-                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">12. Polishing
-                        Stage </h2>
-                    <p style="text-align: left;">Content to be given</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;">13. Final
-                        Settling
-                    </h2>
-                    <p style="text-align: left;">The water may pass through a final settling pond or tank to allow any
-                        remaining suspended solids to settle out.</p>
-                </div>
-                <div class="col">
 
-                </div>
-            </div>
+            <div class="gap"></div>
+            <h2 style="-webkit-text-fill-color: #0195D1;text-align: left;"><strong>Why to Choose Bio-Reed Non-Electric
+                    Solution?</strong>
+            </h2>
+            <h2 style="font-family: 'Roboto'; -webkit-text-fill-color: #0195D1;text-align: left;"><strong>
+                </strong></h2>
+            <ul style="text-align: left;">
+                <li><strong style=" -webkit-text-fill-color: #0195D1;">Innovation</strong>: We are at the forefront of
+                    scientific advancements. </li>
+                <li><strong style=" -webkit-text-fill-color: #0195D1;">Sustainability</strong>: Eco-friendly and
+                    sustainable for long-term use.</li>
+                <li><strong style=" -webkit-text-fill-color: #0195D1;">Expertise</strong>: Developed by a team of
+                    experienced scientists and researchers. </li>
+                <li><strong style=" -webkit-text-fill-color: #0195D1;">Results</strong>: Proven effectiveness in various
+                    applications. </li>
+            </ul>
+
+
+
+
         </div>
 
     </div>
     </div>
     </div>
 
-    <div class=" table-container">
-        <h2 style="font-family: 'Roboto' ; -webkit-text-fill-color: #0195D1;">Smart returns for your hard-earned
-            money!
-        </h2>
-        <p>Your investment in Bioman will give you returns within 48 months. And then a lifetime of peace and
-            comfort!
-        </p>
 
-        <div class="designer-line"></div>
-        <table class="table-bordered">
-            <thead>
-                <tr>
-                    <th>Investment</th>
-                    <th>₹ 95,000</th>
-                    <th>₹ 1,15,000</th>
-                </tr>
-                <tr>
-                    <th>Year</th>
-                    <th>Conventional Septic Tank Sewage removal cost per year (in ₹)</th>
-                    <th>Jal Science Bio-tank Operating cost per year (in ₹)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>12,000</td>
-                    <td>3,000</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>24,000</td>
-                    <td>3,000</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>24,000</td>
-                    <td>3,000</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>24,000</td>
-                    <td>3,000</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>24,000</td>
-                    <td>3,000</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>24,000</td>
-                    <td>3,000</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>24,000</td>
-                    <td>3,000</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>24,000</td>
-                    <td>3,000</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>24,000</td>
-                    <td>3,000</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>24,000</td>
-                    <td>3,000</td>
-                </tr>
-                <tr>
-                    <td>Total</td>
-                    <td>2,28,000</td>
-                    <td>30,000</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 
 
     <div class="text-dstp-desktop">
@@ -936,7 +913,26 @@
                     }
                 }
             });
-        });</script>
+        });
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }</script>
 </body>
 
 </html>
