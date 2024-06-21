@@ -544,13 +544,14 @@
 
                             <div class="d-flex icon">
                                 <p class="mb-0 text-white me-2">Follow Us:</p>
-                                <a href="" class="me-2"><i class="fab fa-facebook-f text-body link-hover"></i></a>
-                                <a href="" class="me-2"><i class="fab fa-twitter text-body link-hover"></i></a>
-                                <a href="" class="me-2"><i class="fab fa-instagram text-body link-hover"></i></a>
-                                <a href="" class="me-2"><i class="fab fa-youtube text-body link-hover"></i></a>
-                                <a href="" class="me-2"><i class="fab fa-linkedin-in text-body link-hover"></i></a>
-                                <a href="" class="me-2"><i class="fab fa-skype text-body link-hover"></i></a>
-                                <a href="" class=""><i class="fab fa-pinterest-p text-body link-hover"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=61560892111652" class="me-2"><i
+                                        class="fab fa-facebook-f text-body link-hover"></i></a>
+                                <a href="https://x.com/jal_scienc46259" class="me-2"><i
+                                        class="fab fa-twitter text-body link-hover"></i></a>
+                                <a href="https://www.youtube.com/channel/UC1gH6VpyskdXSEWpcZ0b2OQ" class="me-2"><i
+                                        class="fab fa-youtube text-body link-hover"></i></a>
+                                <a href="https://www.linkedin.com/in/jal-science-3257a4313/" class="me-2"><i
+                                        class="fab fa-linkedin-in text-body link-hover"></i></a>
                             </div>
                         </div>
                     </div>
@@ -571,10 +572,9 @@
                                 <a href="home.html" class="nav-item nav-link "
                                     style="-webkit-text-fill-color: white;">Home</a>
                                 <div class="nav-item dropdown">
-                                    <a href="./stp/domesticstp.html" class="nav-link dropdown-toggle"
-                                        data-bs-toggle="dropdown" style="-webkit-text-fill-color: white;">Residential
-                                        Sewage
-                                        Treatment Solution</a>
+                                    <a href="./stp/domesticstp.html" class="nav-link"
+                                        style="-webkit-text-fill-color: white;">Residential Sewage Treatment Solution <i
+                                            class="fas fa-caret-down"></i></a>
                                     <div class="dropdown-menu m-0 bg-secondary rounded-0"
                                         style="-webkit-text-fill-color: black;">
                                         <a href="./stp/greystp.html" class="dropdown-item">Grey water Treatment
@@ -584,11 +584,12 @@
                                         <a href="#" class="dropdown-item">Dropdown 4</a>
                                     </div>
                                 </div>
+
                                 <div class="nav-item dropdown">
-                                    <a href="./stp/commercialstp.html" class="nav-link dropdown-toggle"
-                                        data-bs-toggle="dropdown" style="-webkit-text-fill-color: white;">Commercial
+                                    <a href="./stp/commercialstp.html" class="nav-link"
+                                        style="-webkit-text-fill-color: white;">Commercial
                                         Sewage
-                                        Treatment Solution</a>
+                                        Treatment Solution <i class="fas fa-caret-down"></i></a>
                                     <div class="dropdown-menu m-0 bg-secondary rounded-0"
                                         style="-webkit-text-fill-color: black;">
                                         <a href="#" class="dropdown-item">Dropdown 1</a>
@@ -603,9 +604,77 @@
                                 <a href="contact.html" class="nav-item nav-link"
                                     style="-webkit-text-fill-color: white;">Contact Us</a>
                             </div>
-                            <a href="detail-page.html" class="nav-item nav-link"><button type="button"
+                            <!-- <a href="detail-page.html" class="nav-item nav-link"><button type="button"
                                     class="btn btn-danger breathing-button">Quick Enquiry</button>
-                            </a>
+                            </a> -->
+
+                            <div id="contact-popup" class="popup">
+                                <div class="popup-content">
+
+                                    <section class="contact-section">
+                                        <div class="contact-intro">
+                                            <h2 class="contact-title">Get in Touch</h2>
+                                            <p class="contact-description">
+                                                Fill out the form below and we'll get back to you as soon soon as
+                                                possible.
+                                            </p>
+                                        </div>
+
+                                        <form class="contact-form" action="https://api.web3forms.com/submit"
+                                            method="POST">
+
+                                            <input type="hidden" name="access_key"
+                                                value="e75c0a81-e9e7-4f49-a079-086cdf10d424" />
+                                            <input type="hidden" name="subject"
+                                                value="New Contact Form Submission from Web3Forms" />
+                                            <input type="hidden" name="from_name" value="My Website" />
+
+                                            <div class="form-group-container">
+                                                <div class="form-group">
+                                                    <label for="contact-name" class="form-label">Name</label>
+                                                    <input id="contact-name" name="name" class="form-input"
+                                                        placeholder="Your name" type="text" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="contact-email" class="form-label">Email</label>
+                                                    <input id="contact-email" name="email" class="form-input"
+                                                        placeholder="Your email" type="email" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="contact-phone" class="form-label">Phone</label>
+                                                    <input id="contact-phone" name="phone" class="form-input"
+                                                        placeholder="+91 (234) 567 889" type="text" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="contact-message" class="form-label">Message</label>
+                                                    <textarea class="form-textarea" id="contact-message" name="message"
+                                                        placeholder="Your message"></textarea>
+                                                </div>
+                                            </div>
+                                            <button class="form-submit" type="submit">Send Message</button>
+                                            <input type="hidden" name="redirect"
+                                                value="https://jalscience.com/home.html">
+                                        </form>
+
+                                    </section>
+
+                                </div>
+                            </div>
+
+                            <button id="trigger-contact-popup" type="button"
+                                class="btn btn-danger breathing-button">Quick
+                                Enquiry</button>
+
+
+
+
+
+
+
+
+
+
+
                         </div>
                     </nav>
                 </div>
@@ -912,13 +981,16 @@
                             </p>
                             <p class="text-secondary line-h">Phone: <span class="text-white">+91 7019169125</span></p>
                             <div class="d-flex line-h">
-                                <a class="btn btn-light me-2 btn-md-square rounded-circle" href=""><i
-                                        class="fab fa-twitter text-dark"></i></a>
-                                <a class="btn btn-light me-2 btn-md-square rounded-circle" href=""><i
+                                <a class="btn btn-light me-2 btn-md-square rounded-circle"
+                                    href="https://x.com/jal_scienc46259"><i class="fab fa-twitter text-dark"></i></a>
+                                <a class="btn btn-light me-2 btn-md-square rounded-circle"
+                                    href="https://www.facebook.com/profile.php?id=61560892111652"><i
                                         class="fab fa-facebook-f text-dark"></i></a>
-                                <a class="btn btn-light me-2 btn-md-square rounded-circle" href=""><i
+                                <a class="btn btn-light me-2 btn-md-square rounded-circle"
+                                    href="https://www.youtube.com/channel/UC1gH6VpyskdXSEWpcZ0b2OQ"><i
                                         class="fab fa-youtube text-dark"></i></a>
-                                <a class="btn btn-light btn-md-square rounded-circle" href=""><i
+                                <a class="btn btn-light btn-md-square rounded-circle"
+                                    href="https://www.linkedin.com/in/jal-science-3257a4313/"><i
                                         class="fab fa-linkedin-in text-dark"></i></a>
                             </div>
                         </div>
@@ -944,23 +1016,25 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-3">
-
-                        <h4 class="mb-4 text-white">Contact Us</h4>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">Email address</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                            <label for="floatingPassword">Name</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" placeholder="Leave a comment here"
-                                id="floatingTextarea"></textarea>
-                            <label for="floatingTextarea">Message</label>
-                        </div>
-                        <button type="button" class="btn btn-primary">Submit</button>
-
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            <h4 class="mb-4 text-white">Contact Us</h4>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingPassword"
+                                    placeholder="Password">
+                                <label for="floatingPassword">Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="Leave a comment here"
+                                    id="floatingTextarea"></textarea>
+                                <label for="floatingTextarea">Message</label>
+                            </div>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -1023,7 +1097,7 @@
                 setTimeout(() => {
                     document.getElementById('popup').style.display = 'flex';
                     document.body.classList.add('no-scroll'); // Disable scrolling
-                }, 5000); // 5 seconds
+                }, 3000); // 5 seconds
             });
 
             document.getElementById('closePopup').addEventListener('click', () => {
@@ -1033,6 +1107,23 @@
 
 
 
+
+        </script>
+        <script>
+            window.addEventListener('load', () => {
+                // Remove the code that automatically opens the popup after 5 seconds
+
+                const openPopupButton = document.getElementById('trigger-contact-popup');
+                openPopupButton.addEventListener('click', () => {
+                    document.getElementById('contact-popup').style.display = 'flex';
+                    document.body.classList.add('no-scroll'); // Disable scrolling
+                });
+
+                document.getElementById('closePopup').addEventListener('click', () => {
+                    document.getElementById('contact-popup').style.display = 'none';
+                    document.body.classList.remove('no-scroll'); // Enable scrolling
+                });
+            });
         </script>
     </div>
 </body>
