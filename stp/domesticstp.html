@@ -34,6 +34,155 @@
     <link href="../css/style.css" rel="stylesheet">
 
     <style>
+        /* Style the popup container */
+        .popup {
+            position: fixed;
+            /* Ensures the popup stays in place when scrolling */
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* Stretches to full width of the screen */
+            height: 100vh;
+            /* Stretches to full height of the viewport */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent black background */
+            display: none;
+            /* Hide the popup initially */
+            /* justify-content: center; */
+            /* Centers the popup content horizontally */
+            /* align-items: center; */
+            /* Centers the popup content vertically */
+            z-index: 10;
+            /* Ensures the popup is displayed on top of other elements */
+            transition: all 0.3s ease-in-out;
+            /* Smooth animation for showing/hiding */
+        }
+
+        /* Style the popup content */
+        .popup-content {
+            background-color: #fff;
+            /* White background for the popup content */
+            padding: 30px;
+            border-radius: 5px;
+            /* Rounded corners for the popup */
+            /* text-align: center; */
+            /* Center the text content within the popup */
+            max-width: 600px;
+            /* Set a maximum width for responsiveness */
+            margin: 0 auto;
+            /* Center the popup content horizontally */
+        }
+
+        /* Style the contact title */
+        .contact-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* Style the contact description */
+        .contact-description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* Style the contact form container */
+        .form-group-container {
+            display: flex;
+            /* Arranges form elements horizontally */
+            flex-wrap: wrap;
+            /* Wraps form elements to the next line if they don't fit */
+            margin: 0 auto;
+            /* Centers the form horizontally */
+            width: 100%;
+            /* Makes the form container full width */
+        }
+
+        /* Style the form group */
+        .form-group {
+            margin-bottom: 15px;
+            width: 100%;
+            /* Each form group takes up the full width */
+        }
+
+        /* Style the form label */
+        .form-label {
+            display: block;
+            /* Makes the label appear above the input field */
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* Style the form input fields */
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            /* Ensures padding doesn't affect input width */
+            resize: vertical;
+            /* Allows resizing the textarea vertically */
+        }
+
+        /* Style the submit button */
+        .form-submit {
+            background-color: #00acf5;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+            /* Smooth hover effect */
+        }
+
+        /* Style the submit button on hover */
+        .form-submit:hover {
+            background-color: #222;
+        }
+
+        /* Show the popup with an animation (optional) */
+        .popup.show {
+            display: flex;
+        }
+
+        /* Style the close icon */
+        /* .close-icon {
+            top: 10px;
+            right: 10px;
+            color: #00acf5;
+        }
+
+        .close-icon:hover {
+            color: #999;
+        } */
+
+        /* Style the contact title */
+        .contact-title {
+            display: flex;
+            /* Make the title container a flexbox */
+            justify-content: space-between;
+            /* Align items horizontally at opposite ends */
+            align-items: center;
+            /* Align items vertically in the middle */
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* Style the close icon */
+        .close-icon {
+            font-size: 24px;
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .close-icon:hover {
+            color: #999;
+        }
+
         .img-circle {
             border-radius: 50%;
             /* Set border radius to 50% for circular shape */
@@ -415,9 +564,62 @@
                             <a href="../contact.html" class="nav-item nav-link"
                                 style="-webkit-text-fill-color: white;">Contact Us</a>
                         </div>
-                        <a href="../detail-page.html" class="nav-item nav-link"><button type="button"
-                                class="btn btn-danger breathing-button">Quick Enquiry</button>
-                        </a>
+                        <div id="contact-popup" class="popup">
+                            <div class="popup-content">
+
+                                <section class="contact-section">
+                                    <div class="contact-intro">
+                                        <h2 class="contact-title">Get in Touch <a href="#" id="closePopup"
+                                                class="close-icon">&#10006;</a></h2>
+
+                                        <p class="contact-description">
+                                            Fill out the form below and we'll get back to you as soon soon as
+                                            possible.
+                                        </p>
+
+                                    </div>
+
+                                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+                                        <input type="hidden" name="access_key"
+                                            value="e75c0a81-e9e7-4f49-a079-086cdf10d424" />
+                                        <input type="hidden" name="subject"
+                                            value="New Contact Form Submission from Web3Forms" />
+                                        <input type="hidden" name="from_name" value="My Website" />
+
+                                        <div class="form-group-container">
+                                            <div class="form-group">
+                                                <label for="contact-name" class="form-label">Name</label>
+                                                <input id="contact-name" name="name" class="form-input"
+                                                    placeholder="Your name" type="text" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="contact-email" class="form-label">Email</label>
+                                                <input id="contact-email" name="email" class="form-input"
+                                                    placeholder="Your email" type="email" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="contact-phone" class="form-label">Phone</label>
+                                                <input id="contact-phone" name="phone" class="form-input"
+                                                    placeholder="+91 (234) 567 889" type="text" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="contact-message" class="form-label">Message</label>
+                                                <textarea class="form-textarea" id="contact-message" name="message"
+                                                    placeholder="Your message"></textarea>
+                                            </div>
+                                        </div>
+                                        <button class="form-submit" type="submit">Send Message</button>
+                                        <input type="hidden" name="redirect" value="https://jalscience.com/home.html">
+                                    </form>
+
+                                </section>
+
+                            </div>
+                        </div>
+
+                        <button id="trigger-contact-popup" type="button" class="btn btn-danger breathing-button">Quick
+                            Enquiry</button>
                     </div>
                 </nav>
             </div>
@@ -822,13 +1024,16 @@
                                 class="text-white">mailtojalscience@gmail.com</span></p>
                         <p class="text-secondary line-h">Phone: <span class="text-white">+91 7019169125</span></p>
                         <div class="d-flex line-h">
-                            <a class="btn btn-light me-2 btn-md-square rounded-circle" href=""><i
-                                    class="fab fa-twitter text-dark"></i></a>
-                            <a class="btn btn-light me-2 btn-md-square rounded-circle" href=""><i
+                            <a class="btn btn-light me-2 btn-md-square rounded-circle"
+                                href="https://x.com/jal_scienc46259"><i class="fab fa-twitter text-dark"></i></a>
+                            <a class="btn btn-light me-2 btn-md-square rounded-circle"
+                                href="https://www.facebook.com/profile.php?id=61560892111652"><i
                                     class="fab fa-facebook-f text-dark"></i></a>
-                            <a class="btn btn-light me-2 btn-md-square rounded-circle" href=""><i
+                            <a class="btn btn-light me-2 btn-md-square rounded-circle"
+                                href="https://www.youtube.com/channel/UC1gH6VpyskdXSEWpcZ0b2OQ"><i
                                     class="fab fa-youtube text-dark"></i></a>
-                            <a class="btn btn-light btn-md-square rounded-circle" href=""><i
+                            <a class="btn btn-light btn-md-square rounded-circle"
+                                href="https://www.linkedin.com/in/jal-science-3257a4313/"><i
                                     class="fab fa-linkedin-in text-dark"></i></a>
                         </div>
                     </div>
@@ -854,23 +1059,27 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-3">
-
-                    <h4 class="mb-4 text-white">Contact Us</h4>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Email address</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">Name</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" placeholder="Leave a comment here"
-                            id="floatingTextarea"></textarea>
-                        <label for="floatingTextarea">Message</label>
-                    </div>
-                    <button type="button" class="btn btn-primary">Submit</button>
-
+                    <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                        <input type="hidden" name="access_key" value="e75c0a81-e9e7-4f49-a079-086cdf10d424" />
+                        <h4 class="mb-4 text-white">Contact Us</h4>
+                        <div class="form-floating mb-3">
+                            <input type="email" name="email" class="form-control" id="floatingInput"
+                                placeholder="name@example.com" required>
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" name="name" class="form-control" id="floatingPassword"
+                                placeholder="Password" required>
+                            <label for="floatingPassword">Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea name="message" class="form-control" placeholder="Leave a comment here"
+                                id="floatingTextarea" required></textarea>
+                            <label for="floatingTextarea">Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div id="result"></div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -940,6 +1149,63 @@
             dots[slideIndex - 1].className += " active";
             setTimeout(showSlides, 2000); // Change image every 2 seconds
         }</script>
+    <script>
+        window.addEventListener('load', () => {
+            // Remove the code that automatically opens the popup after 5 seconds
+
+            const openPopupButton = document.getElementById('trigger-contact-popup');
+            openPopupButton.addEventListener('click', () => {
+                document.getElementById('contact-popup').style.display = 'flex';
+                document.body.classList.add('no-scroll'); // Disable scrolling
+            });
+
+            document.getElementById('closePopup').addEventListener('click', () => {
+                document.getElementById('contact-popup').style.display = 'none';
+                document.body.classList.remove('no-scroll'); // Enable scrolling
+            });
+        });
+    </script>
+    <script>
+        const form = document.getElementById('form');
+        const result = document.getElementById('result');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            result.innerHTML = "Email sent successfully!!!"
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = "Our Representative will contact you very shortly";
+                    } else {
+                        console.log(response);
+                        result.innerHTML = json.message;
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong!";
+                })
+                .then(function () {
+                    form.reset();
+                    setTimeout(() => {
+                        result.style.display = "none";
+                    }, 3000);
+                });
+        });
+    </script>
+
 </body>
 
 </html>
