@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jal Science</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@100;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--for popup-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-f0ytyj4zWKZO2YRIFdDctjJvEMqbialcWLXj3oVROYXLHleUi5XLxrBqMqQvZPvQJ"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+    <style>
+        /* popup css */
+        /* .popup {
+            display: none;
+           
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+           
+        }
+
+        .popup-content {
+            background-color: #fff;
+           
+            border-radius: 5px;
+
+        }
+
+        .no-scroll {
+            overflow: hidden;
+          
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: calc(100% - 12px);
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #66afe9;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        } */
+
+        /* Style the popup container */
+        .popup {
+            position: fixed;
+            /* Ensures the popup stays in place when scrolling */
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* Stretches to full width of the screen */
+            height: 100vh;
+            /* Stretches to full height of the viewport */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent black background */
+            display: none;
+            /* Hide the popup initially */
+            /* justify-content: center; */
+            /* Centers the popup content horizontally */
+            /* align-items: center; */
+            /* Centers the popup content vertically */
+            z-index: 10;
+            /* Ensures the popup is displayed on top of other elements */
+            transition: all 0.3s ease-in-out;
+            /* Smooth animation for showing/hiding */
+        }
+
+        /* Style the popup content */
+        .popup-content {
+            background-color: #fff;
+            /* White background for the popup content */
+            padding: 30px;
+            border-radius: 5px;
+            /* Rounded corners for the popup */
+            /* text-align: center; */
+            /* Center the text content within the popup */
+            max-width: 600px;
+            /* Set a maximum width for responsiveness */
+            margin: 0 auto;
+            /* Center the popup content horizontally */
+        }
+
+        /* Style the contact title */
+        .contact-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* Style the contact description */
+        .contact-description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* Style the contact form container */
+        .form-group-container {
+            display: flex;
+            /* Arranges form elements horizontally */
+            flex-wrap: wrap;
+            /* Wraps form elements to the next line if they don't fit */
+            margin: 0 auto;
+            /* Centers the form horizontally */
+            width: 100%;
+            /* Makes the form container full width */
+        }
+
+        /* Style the form group */
+        .form-group {
+            margin-bottom: 15px;
+            width: 100%;
+            /* Each form group takes up the full width */
+        }
+
+        /* Style the form label */
+        .form-label {
+            display: block;
+            /* Makes the label appear above the input field */
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* Style the form input fields */
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            /* Ensures padding doesn't affect input width */
+            resize: vertical;
+            /* Allows resizing the textarea vertically */
+        }
+
+        /* Style the submit button */
+        .form-submit {
+            background-color: #00acf5;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+            /* Smooth hover effect */
+        }
+
+        /* Style the submit button on hover */
+        .form-submit:hover {
+            background-color: #222;
+        }
+
+        /* Show the popup with an animation (optional) */
+        .popup.show {
+            display: flex;
+        }
+
+        /* Style the close icon */
+        /* .close-icon {
+            top: 10px;
+            right: 10px;
+            color: #00acf5;
+        }
+
+        .close-icon:hover {
+            color: #999;
+        } */
+
+        /* Style the contact title */
+        .contact-title {
+            display: flex;
+            /* Make the title container a flexbox */
+            justify-content: space-between;
+            /* Align items horizontally at opposite ends */
+            align-items: center;
+            /* Align items vertically in the middle */
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* Style the close icon */
+        .close-icon {
+            font-size: 24px;
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .close-icon:hover {
+            color: #999;
+        }
+
+
+
+
+        /* block container convert to link */
+        .block_cont {
+            display: block;
+        }
+
+        /* goals section */
+        .gtco-testimonials {
+            position: relative;
+            margin-top: 30px;
+
+            h2 {
+                font-size: 30px;
+                text-align: center;
+                color: #333333;
+                margin-bottom: 50px;
+            }
+
+            .owl-stage-outer {
+                padding: 30px 0;
+            }
+
+            .owl-nav {
+                display: none;
+            }
+
+            /* .owl-dots {
+        text-align: center;
+
+        span {
+            position: relative;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            background: #fff;
+            border: 2px solid #01b0f8;
+            margin: 0 5px;
+        }
+
+        .active {
+            box-shadow: none;
+
+            span {
+                background: #01b0f8;
+                box-shadow: none;
+                height: 12px;
+                width: 12px;
+                margin-bottom: -1px;
+            }
+        }
+    } */
+            .owl-dots {
+                text-align: center;
+                display: flex;
+                /* Add this to make the container flex */
+                justify-content: center;
+                /* Center the dots within the container */
+
+                span {
+                    position: relative;
+                    height: 10px;
+                    width: 10px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    /* Ensure dots are displayed inline */
+                    background: #fff;
+                    border: 2px solid #01b0f8;
+                    margin: 0 5px;
+                }
+
+                .active {
+                    box-shadow: none;
+
+                    span {
+                        background: #01b0f8;
+                        box-shadow: none;
+                        height: 12px;
+                        width: 12px;
+                        margin-bottom: -1px;
+                    }
+                }
+            }
+
+
+
+            .card {
+                background: #fff;
+                box-shadow: 0 8px 30px -7px #c9dff0;
+                margin: 0 20px;
+                padding: 0 10px;
+                border-radius: 20px;
+                border: 0;
+
+                .card-img-top {
+                    max-width: 15rem;
+                    margin: 15px auto 0;
+
+                    width: 15rem;
+                    height: 15rem;
+                }
+
+                h5 {
+                    color: #01b0f8;
+                    font-size: 21px;
+                    line-height: 1.3;
+
+                    span {
+                        font-size: 18px;
+                        color: #666666;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                    color: #555;
+                    padding-bottom: 15px;
+                }
+            }
+
+            .active {
+                opacity: 0.5;
+                transition: all 0.3s;
+            }
+
+            .center {
+                opacity: 1;
+
+                h5 {
+                    font-size: 24px;
+
+                    span {
+                        font-size: 20px;
+                    }
+                }
+
+                .card-img-top {
+                    max-width: 100%;
+                    height: 15rem;
+                    width: 15rem;
+                }
+            }
+        }
+
+        @media (max-width: 767px) {
+            .gtco-testimonials {
+                margin-top: 20px;
+            }
+        }
+
+        .owl-carousel {
+            .owl-nav button {
+
+                &.owl-next,
+                &.owl-prev {
+                    outline: 0;
+                }
+            }
+
+            button.owl-dot {
+                outline: 0;
+            }
+        }
+
+        .hero {
+            display: flex;
+            height: 70vh;
+            /* Full viewport height */
+            position: relative;
+            /* Relative positioning for absolute child elements */
+        }
+
+        .hero-half {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: white;
+            position: relative;
+
+
+        }
+
+        .left {
+            background-color: #00acf5;
+
+        }
+
+        .right {
+            background-color: #4686e0;
+
+        }
+
+        /* .hero-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    flex: 1;
+
+}
+
+.hero-half {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+.left {
+    background-color: #00acf5;
+ 
+}
+
+.right {
+    background-color: #4686e0;
+  
+} */
+
+
+        h2 {
+
+            margin-bottom: 10px;
+        }
+
+        .title-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f1f1f1;
+        }
+
+        .image-left,
+        .image-right {
+            position: absolute;
+            top: 97%;
+            width: 200px;
+            /* Adjust as needed */
+            height: 200px;
+            /* Adjust as needed */
+            border-radius: 50%;
+            border: 13px solid white;
+            /* Border around the image */
+            transform: translateY(-50%);
+        }
+
+        .image-left {
+            left: 25vw;
+            transform: translate(-50%, -50%);
+        }
+
+        .image-right {
+            right: 25vw;
+            transform: translate(50%, -50%);
+        }
+
+        .hero-half.right i,
+        .hero-half.left i {
+            font-size: 27px;
+            /* Adjust as needed */
+            margin-right: 10px;
+            /* Spacing between icon and text */
+        }
+
+
+
+        /* Desktop version */
+        @media (min-width: 1024px) {
+            .desktop-section {
+                display: block;
+            }
+
+            .mobile-section {
+                display: none;
+            }
+
+            /* Add your desktop-specific styles here */
+        }
+
+        /* Mobile version */
+        @media (max-width: 1023px) {
+            .desktop-section {
+                display: none;
+            }
+
+            .mobile-section {
+                display: block;
+            }
+
+            /* Add your mobile-specific styles here */
+        }
+
+        @media only screen and (max-width: 600px) {
+            .hero-mobile {
+                display: flex;
+                flex-direction: column;
+                height: 50vh;
+                /* Half of the viewport height */
+            }
+
+            .hero-half-mobile {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                color: white;
+                position: relative;
+            }
+
+            .text-content {
+                margin-top: 10px;
+                padding-left: 5vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar start -->
+    <div class="container-fluid sticky-top px-0">
+        <div class="container-fluid topbar bg-dark d-none d-lg-block">
+            <div class="container px-0">
+                <div class="topbar-top d-flex justify-content-between flex-lg-wrap">
+
+                    <div class="top-link flex-lg-wrap">
+
+                        <div class="d-flex icon">
+                            <p class="mb-0 text-white me-2">Follow Us:</p>
+                            <a href="https://www.facebook.com/profile.php?id=61560892111652" class="me-2"><i
+                                    class="fab fa-facebook-f text-body link-hover"></i></a>
+                            <a href="https://x.com/jal_scienc46259" class="me-2"><i
+                                    class="fab fa-twitter text-body link-hover"></i></a>
+                            <a href="https://www.youtube.com/channel/UC1gH6VpyskdXSEWpcZ0b2OQ" class="me-2"><i
+                                    class="fab fa-youtube text-body link-hover"></i></a>
+                            <a href="https://www.linkedin.com/in/jal-science-3257a4313/" class="me-2"><i
+                                    class="fab fa-linkedin-in text-body link-hover"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-light-nav">
+            <div class="container px-0">
+                <nav class="navbar navbar-light navbar-expand-xl">
+                    <a href="home.html" class="navbar-brand ">
+                        <img src="img/logo_w.png" style="width: 10rem;">
+                    </a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars " style="color: white;"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-light-nav py-3" id="navbarCollapse">
+                        <div class="navbar-nav mx-auto border-top" style="-webkit-text-fill-color: white;">
+                            <a href="home.html" class="nav-item nav-link "
+                                style="-webkit-text-fill-color: white;">Home</a>
+
+                            <div class="nav-item dropdown">
+                                <a href="./stp/domesticstp.html" class="nav-link"
+                                    style="-webkit-text-fill-color: white;">Residential Sewage Treatment Solution <i
+                                        class="fas fa-caret-down"></i></a>
+                                <div class="dropdown-menu m-0 bg-secondary rounded-0"
+                                    style="-webkit-text-fill-color: black;">
+                                    <a href="./stp/greystp.html" class="dropdown-item">Grey water Treatment Plant</a>
+                                    <a href="#" class="dropdown-item">Dropdown 2</a>
+                                    <a href="#" class="dropdown-item">Dropdown 3</a>
+                                    <a href="#" class="dropdown-item">Dropdown 4</a>
+                                </div>
+                            </div>
+
+                            <div class="nav-item dropdown">
+                                <a href="./stp/commercialstp.html" class="nav-link"
+                                    style="-webkit-text-fill-color: white;">Commercial
+                                    Sewage
+                                    Treatment Solution <i class="fas fa-caret-down"></i></a>
+                                <div class="dropdown-menu m-0 bg-secondary rounded-0"
+                                    style="-webkit-text-fill-color: black;">
+                                    <a href="#" class="dropdown-item">Dropdown 1</a>
+                                    <a href="#" class="dropdown-item">Dropdown 2</a>
+                                    <a href="#" class="dropdown-item">Dropdown 3</a>
+                                    <a href="#" class="dropdown-item">Dropdown 4</a>
+                                </div>
+                            </div>
+
+                            <a href="404.html" class="nav-item nav-link"
+                                style="-webkit-text-fill-color: white;">Blogs</a>
+
+                            <a href="contact.html" class="nav-item nav-link"
+                                style="-webkit-text-fill-color: white;">Contact Us</a>
+                        </div>
+                        <!-- <a href="detail-page.html" class="nav-item nav-link"><button type="button"
+                                class="btn btn-danger breathing-button">Quick Enquiry</button>
+                        </a> -->
+
+                        <!-- <a href="#" class="nav-item nav-link" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+                            <button type="button" class="btn btn-danger breathing-button">Quick Enquiry</button>
+                        </a>
+
+                        <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="enquiryModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>This is some content within the modal body. You can add any HTML elements you
+                                            want here, such as text, forms, images, etc.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <div id="contact-popup" class="popup">
+                            <div class="popup-content">
+
+                                <section class="contact-section">
+                                    <div class="contact-intro">
+                                        <h2 class="contact-title">Get in Touch <a href="#" id="closePopup"
+                                                class="close-icon">&#10006;</a></h2>
+
+                                        <p class="contact-description">
+                                            Fill out the form below and we'll get back to you as soon soon as
+                                            possible.
+                                        </p>
+
+                                    </div>
+
+                                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+                                        <input type="hidden" name="access_key"
+                                            value="e75c0a81-e9e7-4f49-a079-086cdf10d424" />
+                                        <input type="hidden" name="subject"
+                                            value="New Contact Form Submission from Web3Forms" />
+                                        <input type="hidden" name="from_name" value="My Website" />
+
+                                        <div class="form-group-container">
+                                            <div class="form-group">
+                                                <label for="contact-name" class="form-label">Name</label>
+                                                <input id="contact-name" name="name" class="form-input"
+                                                    placeholder="Your name" type="text" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="contact-email" class="form-label">Email</label>
+                                                <input id="contact-email" name="email" class="form-input"
+                                                    placeholder="Your email" type="email" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="contact-phone" class="form-label">Phone</label>
+                                                <input id="contact-phone" name="phone" class="form-input"
+                                                    placeholder="+91 (234) 567 889" type="text" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="contact-message" class="form-label">Message</label>
+                                                <textarea class="form-textarea" id="contact-message" name="message"
+                                                    placeholder="Your message"></textarea>
+                                            </div>
+                                        </div>
+                                        <button class="form-submit" type="submit">Send Message</button>
+                                        <input type="hidden" name="redirect" value="https://jalscience.com/home.html">
+                                    </form>
+
+                                </section>
+
+                            </div>
+                        </div>
+
+                        <button id="trigger-contact-popup" type="button" class="btn btn-danger breathing-button">Quick
+                            Enquiry</button>
+
+
+
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+
+
+
+    <!-- Features Start -->
+    <!-- <div class="container-fluid features mb-5">
+        <div class="container py-5">
+            <div class="row g-4 justify-content-center mx-auto">
+                <div class="col-md-6 col-lg-6 col-xl-3 ">
+                    <div class="row g-4 align-items-center features-item">
+                        <div class="col-4">
+                            <div class="rounded-circle position-relative">
+                                <div class="overflow-hidden rounded-circle">
+                                    <img src="img/dstp.jpg" class="img-zoomin-hero img-fluid rounded-circle w-100"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="features-content d-flex flex-column">
+                                <p class="text-uppercase-index-hero mb-1" style="font-family: 'Roboto'" ;>Residential</p>
+                                <a href="#" class="h5" style="color: white;">
+                                    Sewage Treatment Solution
+                                </a>
+                                <small class="text-body-hero d-block" style="color: white;">Say goodbye to septic tank.
+                                    Say hello to bio-tank!</small>
+                                <br>
+                                <a href="home.html"><button type="button" class="btn btn-outline-light">Click
+                                        here</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="row g-4 align-items-center features-item">
+                        <div class="col-4">
+                            <div class="rounded-circle position-relative">
+                                <div class="overflow-hidden rounded-circle">
+                                    <img src="img/cstp.jpg" class="img-zoomin-hero img-fluid rounded-circle w-100"
+                                        alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="features-content d-flex flex-column">
+                                <p class="text-uppercase-index-hero mb-1" style="font-family: 'Roboto'" ;>COMMERCIAL</p>
+                                <a href="#" class="h5" style="color: white;">
+                                    Sewage Treatment Plant
+                                </a>
+                                <small class="text-body-hero d-block" style="color: white;">Non-electric, compact and
+                                    eco-friendly solution.</small>
+                                <br>
+                                <a href="home.html"><button type="button" class="btn btn-outline-light">Click
+                                        here</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+    <!-- Contact Us Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="bg-light rounded p-5">
+                <div class="row g-4">
+                    <div class="col-lg-5">
+                        <div class="">
+                            <h1 class="mb-4">General Customer Care & Technical Support</h1>
+                            <p class="mb-4">If you have any questions, feedback, or inquiries, please don't hesitate to
+                                reach out to us. We're here to help and look forward to hearing from you!</p>
+                            <div class="rounded">
+                                <!-- <iframe class="rounded w-100" style="height: 425px;"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd"
+                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+
+
+
+                                <div style="width: 100%"><iframe width="100%" height="425" frameborder="0"
+                                        scrolling="no" marginheight="0" marginwidth="0"
+                                        src="https://maps.google.com/maps?width=100%25&amp;height=425&amp;hl=en&amp;q=No.1/1%207th%20Main%20Padarayanapura%20Bangalore-%20560026+(Jal%20Science)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                                            href="https://www.gps.ie/">gps systems</a></iframe></div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <form action="https://api.web3forms.com/submit" method="POST" class="mb-4" id="form">
+                            <input type="hidden" name="access_key" value="e75c0a81-e9e7-4f49-a079-086cdf10d424" />
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <input type="text" class="w-100 form-control border-0 py-3" name="name"
+                                        placeholder="Your Name">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="email" class="w-100 form-control border-0 py-3" name="email"
+                                        placeholder="Enter Your Email">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="w-100 form-control border-0 py-3" name="Phone Number"
+                                        placeholder="Enter Your Phone">
+                                </div>
+
+                                <div class="col-12">
+                                    <textarea name="message" class="w-100 form-control border-0" rows="6" cols="10"
+                                        placeholder="Your Message"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="w-100 btn btn-primary form-control py-3" type="submit">Submit
+                                        Now</button>
+                                </div>
+                                <div id="result"></div>
+                            </div>
+                        </form>
+                        <div class="row g-4">
+                            <div class="col-xl-6">
+                                <div class="d-flex p-4 rounded bg-white">
+                                    <i class="fas fa-map-marker-alt fa-2x text-primary me-4"></i>
+                                    <div>
+                                        <h4>Address</h4>
+                                        <p class="mb-0">No.1/1 7th Main Padarayanapura Bangalore- 560026</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="d-flex p-4 rounded bg-white">
+                                    <i class="fas fa-envelope fa-2x text-primary me-4"></i>
+                                    <div>
+                                        <h4>Mail Us</h4>
+                                        <p class="mb-0">mailtojalscience@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="d-flex p-4 rounded bg-white">
+                                    <i class="fa fa-phone-alt fa-2x text-primary me-4"></i>
+                                    <div>
+                                        <h4>Telephone</h4>
+                                        <p class="mb-0">+91 7019169125</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="d-flex p-4 rounded bg-white">
+                                    <i class="fa fa-share-alt fa-2x text-primary me-4"></i>
+                                    <div>
+                                        <h4>Share</h4>
+                                        <div class="d-flex">
+                                            <a class="me-3" href="https://x.com/jal_scienc46259"><i
+                                                    class="fab fa-twitter text-dark link-hover"></i></a>
+                                            <a class="me-3"
+                                                href="https://www.facebook.com/profile.php?id=61560892111652"><i
+                                                    class="fab fa-facebook-f text-dark link-hover"></i></a>
+                                            <a class="me-3"
+                                                href="https://www.youtube.com/channel/UC1gH6VpyskdXSEWpcZ0b2OQ"><i
+                                                    class="fab fa-youtube text-dark link-hover"></i></a>
+                                            <a class="" href="https://www.linkedin.com/in/jal-science-3257a4313/"><i
+                                                    class="fab fa-linkedin-in text-dark link-hover"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Us End -->
+
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer py-5">
+        <div class="container py-5">
+            <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                <div class="row g-4">
+                    <div class="col-lg-3">
+                        <a href="#" class="d-flex flex-column flex-wrap">
+                            <img src="img/logo_w.png" style="width: 10rem;">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6 col-xl-3">
+                    <div class="footer-item-1">
+                        <h4 class="mb-4 text-white">Get In Touch</h4>
+                        <p class="text-secondary line-h">Address: <span class="text-white">No.1/1 7th Main
+                                Padarayanapura Bangalore- 560026 </span>
+                        </p>
+                        <p class="text-secondary line-h">Email: <span
+                                class="text-white">mailtojalscience@gmail.com</span>
+                        </p>
+                        <p class="text-secondary line-h">Phone: <span class="text-white">+91 7019169125</span></p>
+                        <div class="d-flex line-h">
+                            <a class="btn btn-light me-2 btn-md-square rounded-circle"
+                                href="https://x.com/jal_scienc46259"><i class="fab fa-twitter text-dark"></i></a>
+                            <a class="btn btn-light me-2 btn-md-square rounded-circle"
+                                href="https://www.facebook.com/profile.php?id=61560892111652"><i
+                                    class="fab fa-facebook-f text-dark"></i></a>
+                            <a class="btn btn-light me-2 btn-md-square rounded-circle"
+                                href="https://www.youtube.com/channel/UC1gH6VpyskdXSEWpcZ0b2OQ"><i
+                                    class="fab fa-youtube text-dark"></i></a>
+                            <a class="btn btn-light btn-md-square rounded-circle"
+                                href="https://www.linkedin.com/in/jal-science-3257a4313/"><i
+                                    class="fab fa-linkedin-in text-dark"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-xl-3">
+                    <div class="d-flex flex-column text-start footer-item-3">
+                        <h4 class="mb-4 text-white">Quick Links</h4>
+                        <a class="btn-link text-white" href="./home.html"><i
+                                class="fas fa-angle-right text-white me-2"></i>
+                            Home</a>
+                        <a class="btn-link text-white" href="./stp/domesticstp.html"><i
+                                class="fas fa-angle-right text-white me-2"></i>
+                            Residential STP's</a>
+                        <a class="btn-link text-white" href="./stp/commercialstp.html"><i
+                                class="fas fa-angle-right text-white me-2"></i>
+                            Commercial STP's</a>
+
+                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                            Blogs</a>
+                        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i>
+                            Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-3">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                        <input type="hidden" name="access_key" value="e75c0a81-e9e7-4f49-a079-086cdf10d424" />
+                        <h4 class="mb-4 text-white">Contact Us</h4>
+                        <div class="form-floating mb-3">
+                            <input type="email" name="email" class="form-control" id="floatingInput"
+                                placeholder="name@example.com" required>
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" name="name" class="form-control" id="floatingPassword"
+                                placeholder="Password" required>
+                            <label for="floatingPassword">Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea name="message" class="form-control" placeholder="Leave a comment here"
+                                id="floatingTextarea" required></textarea>
+                            <label for="floatingTextarea">Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div id="result"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-2 border-white rounded-circle back-to-top"><i
+            class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>(function () {
+            "use strict";
+
+            var carousels = function () {
+                $(".owl-carousel1").owlCarousel({
+                    loop: true,
+                    center: true,
+                    margin: 0,
+                    responsiveClass: true,
+                    nav: false,
+                    responsive: {
+                        0: {
+                            items: 1,
+                            nav: false
+                        },
+                        680: {
+                            items: 2,
+                            nav: false,
+                            loop: false
+                        },
+                        1000: {
+                            items: 3,
+                            nav: true
+                        }
+                    }
+                });
+            };
+
+            (function ($) {
+                carousels();
+            })(jQuery);
+        })();
+        // for dropdown to click
+
+
+
+
+    </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.nav-link.dropdown-toggle').on('click', function (e) {
+                var $this = $(this);
+                var $dropdownMenu = $this.next('.dropdown-menu');
+
+                if (!$dropdownMenu.hasClass('show')) {
+                    // Prevent the default action only if the dropdown is not already open
+                    e.preventDefault();
+                    // Open the dropdown
+                    $dropdownMenu.addClass('show');
+                    $this.attr('aria-expanded', 'true');
+                } else {
+                    // Allow the default action (redirect) if the dropdown is already open
+                    window.location.href = $this.attr('href');
+                }
+            });
+
+            // Close the dropdown when clicking outside of it
+            $(document).on('click', function (e) {
+                if (!$(e.target).closest('.nav-item.dropdown').length) {
+                    $('.dropdown-menu').removeClass('show');
+                    $('.nav-link.dropdown-toggle').attr('aria-expanded', 'false');
+                }
+            });
+        });
+    </script> -->
+    <script>
+        window.addEventListener('load', () => {
+            // Remove the code that automatically opens the popup after 5 seconds
+
+            const openPopupButton = document.getElementById('trigger-contact-popup');
+            openPopupButton.addEventListener('click', () => {
+                document.getElementById('contact-popup').style.display = 'flex';
+                document.body.classList.add('no-scroll'); // Disable scrolling
+            });
+
+            document.getElementById('closePopup').addEventListener('click', () => {
+                document.getElementById('contact-popup').style.display = 'none';
+                document.body.classList.remove('no-scroll'); // Enable scrolling
+            });
+        });
+    </script>
+    <script>
+        const form = document.getElementById('form');
+        const result = document.getElementById('result');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            result.innerHTML = "Email sent successfully!!!"
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = "Our Representative will contact you very shortly";
+                    } else {
+                        console.log(response);
+                        result.innerHTML = json.message;
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong!";
+                })
+                .then(function () {
+                    form.reset();
+                    setTimeout(() => {
+                        result.style.display = "none";
+                    }, 3000);
+                });
+        });
+    </script>
+
+
+</body>
+
+</html>
