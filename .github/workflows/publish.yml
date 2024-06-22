@@ -3,32 +3,37 @@ name: Generate a build and push to another branch
 on:
   push:
     branches:
-      - main # The branch name your are commit the new changes
+      - main # The branch name you are committing the new changes to
 
 jobs:
   build:
     runs-on: ubuntu-latest
     name: Build and Push
     steps:
+      # Checkout the repository using a specific commit
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      # Setup Node.js using a specific version
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
 
+      # Install dependencies
       - name: Install Dependencies
         run: npm install
 
+      # Build the project
       - name: Build
         run: npm run build # The build command of your project
 
-      - name: Push to Another Branch
-        uses: s0/git-publish-subdir-action@develop
+      # Push to the main branch
+      - name: Push to Main Branch
+        uses: s0/git-publish-subdir-action@v1.1.0
         env:
           REPO: self
-          BRANCH: main # Replace with the branch name where you want to push the assets
-          FOLDER: main # Replace with the directory where your assets are generated
+          BRANCH: main # Push the assets to the main branch
+          FOLDER: main # The directory where your assets are generated
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: "Build: ({sha}) {msg}" # The commit message
