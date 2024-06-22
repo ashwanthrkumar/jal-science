@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Push
     steps:
-      # Checkout the repository using a specific commit
+      # Checkout the repository using the latest stable release
       - name: Checkout Repository
         uses: actions/checkout@v3
-
+      
       # Setup Node.js using a specific version
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -30,7 +30,7 @@ jobs:
 
       # Push to the main branch
       - name: Push to Main Branch
-        uses: s0/git-publish-subdir-action@v1.1.0
+        uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
           BRANCH: main # Push the assets to the main branch
